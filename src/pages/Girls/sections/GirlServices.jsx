@@ -224,95 +224,131 @@ export default function GirlsServices() {
 
                     {/* RIGHT SLIDER */}
 
-
-                    <div className="w-full">
+                    <div className="w-full min-w-0 overflow-hidden">
 
 
                         <Swiper
+
+                            className="services-swiper !overflow-visible"
 
                             modules={[
                                 Autoplay,
                                 Pagination
                             ]}
 
-
                             autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false,
+                                delay: 3000,
+                                disableOnInteraction: false
                             }}
-
 
                             pagination={{
-                                clickable: true,
+                                clickable: true
                             }}
 
+                            slidesPerView={2}
 
-                            spaceBetween={20}
-
-
-                            slidesPerView={1}
+                            spaceBetween={10}
 
 
                             breakpoints={{
 
+
+                                480: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 12
+                                },
+
+
                                 640: {
                                     slidesPerView: 2,
+                                    spaceBetween: 16
                                 },
 
 
-                                1200: {
+                                1024: {
                                     slidesPerView: 2,
-                                },
+                                    spaceBetween: 20
+                                }
+
 
                             }}
 
-                        >
 
+                        >
 
 
 
                             {featuredServices.map((service) => (
 
 
+
                                 <SwiperSlide
+
                                     key={service.id}
+
+                                    className="
+                !h-auto
+                min-w-0
+                "
+
+
                                 >
 
 
-                                    <div
+
+                                    <article
+
                                         className="
-                                        group
-                                        overflow-hidden
-                                        rounded-[2rem]
-                                        bg-white
-                                        shadow-sm
-                                        transition
-                                        duration-300
-                                        hover:-translate-y-2
-                                        hover:shadow-xl
-                                        "
+                group
+                h-full
+                overflow-hidden
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                "
+
                                     >
 
 
+
+
+                                        {/* IMAGE */}
+
+
                                         <div
+
                                             className="
-                                            h-56
-                                            overflow-hidden
-                                            "
+                    aspect-square
+                    overflow-hidden
+                    sm:aspect-[4/3]
+                    "
+
                                         >
 
+
                                             <img
+
                                                 src={service.image}
-                                                alt={service.name}
+
+                                                alt={`${service.name} beauty service at Nisha Hair Salon`}
+
+                                                loading="lazy"
+
+                                                decoding="async"
+
+
                                                 className="
-                                                h-full
-                                                w-full
-                                                object-cover
-                                                transition
-                                                duration-700
-                                                group-hover:scale-110
-                                                "
+                        h-full
+                        w-full
+                        object-cover
+                        transition
+                        duration-700
+                        group-hover:scale-110
+                        "
+
                                             />
+
 
                                         </div>
 
@@ -320,18 +356,36 @@ export default function GirlsServices() {
 
 
 
-                                        <div className="p-5">
+
+
+                                        {/* CONTENT */}
+
+
+                                        <div
+
+                                            className="
+                    p-3
+                    sm:p-5
+                    "
+
+                                        >
+
 
 
                                             <h3
+
                                                 className="
-                                                text-xl
-                                                font-bold
-                                                text-zinc-900
-                                                "
+                        line-clamp-1
+                        text-sm
+                        font-bold
+                        text-white
+                        sm:text-lg
+                        "
+
                                             >
 
                                                 {service.name}
+
 
                                             </h3>
 
@@ -340,14 +394,20 @@ export default function GirlsServices() {
 
 
                                             <p
+
                                                 className="
-                                                mt-2
-                                                text-sm
-                                                text-zinc-500
-                                                "
+                        mt-2
+                        line-clamp-2
+                        text-xs
+                        leading-5
+                        text-white/50
+                        sm:text-sm
+                        "
+
                                             >
 
                                                 {service.description}
+
 
                                             </p>
 
@@ -356,41 +416,58 @@ export default function GirlsServices() {
 
 
 
+
                                             <div
+
                                                 className="
-                                                mt-4
-                                                flex
-                                                items-center
-                                                justify-between
-                                                "
+                        mt-3
+                        flex
+                        items-center
+                        justify-between
+                        "
+
                                             >
 
 
+
                                                 <span
+
                                                     className="
-                                                    text-xl
-                                                    font-bold
-                                                    text-[#7c5569]
-                                                    "
+                            text-sm
+                            font-black
+                            text-[#d5b48c]
+                            sm:text-xl
+                            "
+
                                                 >
 
                                                     ₹{service.price}
 
-                                                </span>
-
-
-
-
-                                                <span
-                                                    className="
-                                                    text-sm
-                                                    text-zinc-400
-                                                    "
-                                                >
-
-                                                    {service.duration}
 
                                                 </span>
+
+
+
+
+
+
+                                                {
+                                                    service.duration &&
+
+                                                    <span
+
+                                                        className="
+                            text-xs
+                            text-white/40
+                            "
+
+                                                    >
+
+                                                        {service.duration}
+
+                                                    </span>
+
+                                                }
 
 
 
@@ -402,11 +479,15 @@ export default function GirlsServices() {
 
 
 
-                                    </div>
+
+                                    </article>
+
 
 
 
                                 </SwiperSlide>
+
+
 
 
                             ))}
@@ -414,6 +495,7 @@ export default function GirlsServices() {
 
 
                         </Swiper>
+
 
 
                     </div>
