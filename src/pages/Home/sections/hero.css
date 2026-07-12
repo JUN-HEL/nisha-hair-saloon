@@ -321,3 +321,23 @@
     }
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+    .particle,
+    .spark,
+    .light-beam,
+    .light-bloom,
+    .light-haze,
+    .bride-float,
+    .bride-reveal,
+    .bride-shine {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 import { Sparkles, Phone, Star } from "lucide-react";
 import { siteConfig } from "../../../data/siteConfig";
 import "./hero.css";
@@ -10,60 +11,84 @@ export default function Hero() {
 
     const waLink = `https://wa.me/${siteConfig.whatsapp}?text=${waText}`;
 
-    return (
-        <section className="relative min-h-screen overflow-hidden bg-[#100b0d]">
+    // Generate particles only once
+    const particles = useMemo(
+        () =>
+            [...Array(18)].map(() => ({
+                width: `${2 + Math.random() * 3}px`,
+                height: `${2 + Math.random() * 3}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                delay: `${Math.random() * 6}s`,
+                duration: `${5 + Math.random() * 5}s`,
+            })),
+        []
+    );
 
+    return (
+        <section
+            className="relative min-h-screen overflow-hidden bg-[#100b0d]"
+            aria-labelledby="hero-heading"
+        >
             {/* ================= BACKGROUND ================= */}
 
             {/* Base Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#090708] via-[#24151c] to-[#100b0d]" />
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-br from-[#090708] via-[#24151c] to-[#100b0d]"
+            />
 
             {/* Champagne Glow */}
             <div
+                aria-hidden="true"
                 className="
-        absolute
-        right-[18%]
-        top-1/2
-        h-[720px]
-        w-[720px]
-        -translate-y-1/2
-        rounded-full
-        bg-[#d5b48c]/20
-        blur-[170px]
-      "
+                    absolute
+                    right-[18%]
+                    top-1/2
+                    h-[720px]
+                    w-[720px]
+                    -translate-y-1/2
+                    rounded-full
+                    bg-[#d5b48c]/20
+                    blur-[130px]
+                "
             />
 
             {/* Burgundy Atmosphere */}
             <div
+                aria-hidden="true"
                 className="
-        absolute
-        -left-48
-        bottom-0
-        h-[650px]
-        w-[650px]
-        rounded-full
-        bg-[#7c5569]/25
-        blur-[170px]
-      "
+                    absolute
+                    -left-48
+                    bottom-0
+                    h-[650px]
+                    w-[650px]
+                    rounded-full
+                    bg-[#7c5569]/25
+                    blur-[130px]
+                "
             />
 
-            {/* Rose Ambient Light */}
+            {/* Rose Ambient */}
             <div
+                aria-hidden="true"
                 className="
-        absolute
-        right-0
-        top-0
-        h-[420px]
-        w-[420px]
-        rounded-full
-        bg-[#b58fa2]/15
-        blur-[140px]
-      "
+                    absolute
+                    right-0
+                    top-0
+                    h-[420px]
+                    w-[420px]
+                    rounded-full
+                    bg-[#b58fa2]/15
+                    blur-[120px]
+                "
             />
 
-            {/* Moving Beam */}
-            <div className="cinematic-lights">
-
+            {/* Cinematic Lights */}
+            <div
+                aria-hidden="true"
+                className="cinematic-lights"
+            >
                 <div className="light-bloom" />
 
                 <div className="light-beam beam-1" />
@@ -71,65 +96,62 @@ export default function Hero() {
                 <div className="light-beam beam-3" />
 
                 <div className="light-haze" />
-
             </div>
 
-            {/* Luxury Particles */}
-
-            <div className="absolute inset-0 overflow-hidden">
-
-                {[...Array(18)].map((_, i) => (
+            {/* Floating Particles */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 overflow-hidden"
+            >
+                {particles.map((particle, index) => (
                     <span
-                        key={i}
+                        key={index}
                         className="particle absolute rounded-full bg-[#d5b48c]"
                         style={{
-                            width: `${2 + Math.random() * 3}px`,
-                            height: `${2 + Math.random() * 3}px`,
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 6}s`,
-                            animationDuration: `${5 + Math.random() * 5}s`
+                            width: particle.width,
+                            height: particle.height,
+                            left: particle.left,
+                            top: particle.top,
+                            animationDelay: particle.delay,
+                            animationDuration: particle.duration,
                         }}
                     />
                 ))}
-
             </div>
 
             {/* Decorative Ring */}
-
             <div
+                aria-hidden="true"
                 className="
-        absolute
-        right-[14%]
-        top-1/2
-        h-[620px]
-        w-[620px]
-        -translate-y-1/2
-        rounded-full
-        border
-        border-white/5
-      "
+                    absolute
+                    right-[14%]
+                    top-1/2
+                    h-[620px]
+                    w-[620px]
+                    -translate-y-1/2
+                    rounded-full
+                    border
+                    border-white/5
+                "
             />
 
             {/* ================= CONTENT ================= */}
 
             <div
                 className="
-        relative
-        z-10
-        mx-auto
-        grid
-        min-h-screen
-        max-w-7xl
-        items-center
-        gap-12
-        px-6
-        py-24
-        lg:grid-cols-2
-      "
-            >
-
-                {/* ================= LEFT ================= */}
+                    relative
+                    z-10
+                    mx-auto
+                    grid
+                    min-h-screen
+                    max-w-7xl
+                    items-center
+                    gap-12
+                    px-6
+                    py-24
+                    lg:grid-cols-2
+                "
+            >                {/* ================= LEFT ================= */}
 
                 <div>
 
@@ -137,80 +159,92 @@ export default function Hero() {
 
                     <div
                         className="
-            inline-flex
-            items-center
-            gap-2
-            rounded-full
-            border
-            border-white/10
-            bg-white/5
-            px-5
-            py-2
-            text-sm
-            text-[#d5b48c]
-            backdrop-blur-xl
-          "
+                            inline-flex
+                            items-center
+                            gap-2
+                            rounded-full
+                            border
+                            border-white/10
+                            bg-white/5
+                            px-5
+                            py-2
+                            text-sm
+                            text-[#d5b48c]
+                            backdrop-blur-xl
+                        "
                     >
+                        <Sparkles
+                            size={15}
+                            aria-hidden="true"
+                        />
 
-                        <Sparkles size={15} />
-
-                        Luxury Bridal Studio
-
+                        Luxury Hair & Bridal Studio
                     </div>
 
                     {/* Heading */}
 
                     <h1
+                        id="hero-heading"
                         className="
-            mt-8
-            text-5xl
-            font-semibold
-            leading-[1.05]
-            tracking-[-0.04em]
-            text-white
-            md:text-6xl
-            lg:text-7xl
-          "
+                            mt-8
+                            text-5xl
+                            font-semibold
+                            leading-[1.05]
+                            tracking-[-0.04em]
+                            text-white
+                            md:text-6xl
+                            lg:text-7xl
+                        "
                     >
-
-                        Timeless Beauty,
+                        Luxury Hair &
 
                         <br />
 
                         <span
                             className="
-              bg-gradient-to-r
-              from-[#d5b48c]
-              via-[#b58fa2]
-              to-[#d5b48c]
-              bg-clip-text
-              text-transparent
-            "
+                                bg-gradient-to-r
+                                from-[#d5b48c]
+                                via-[#b58fa2]
+                                to-[#d5b48c]
+                                bg-clip-text
+                                text-transparent
+                            "
                         >
-                            Crafted
+                            Bridal Makeup
                         </span>
 
                         <br />
 
-                        For You
-
+                        Studio
                     </h1>
 
                     {/* Description */}
 
                     <p
                         className="
-            mt-7
-            max-w-xl
-            text-lg
-            leading-8
-            text-white/65
-          "
+                            mt-7
+                            max-w-xl
+                            text-lg
+                            leading-8
+                            text-white/65
+                        "
                     >
-                        Bridal styling and luxury beauty experiences
-                        designed to make every celebration feel
-                        unforgettable with flawless makeup,
-                        elegant hairstyles, and personalized care.
+                        Experience premium bridal makeup, hairstyling,
+                        haircuts, hair coloring, facials, skincare and
+                        beauty services at <strong>Nisha Hair Salon</strong>
+                        in Gumkhal, Pauri Garhwal. Our expert stylists
+                        create elegant looks for weddings, parties and
+                        everyday confidence.
+                    </p>
+
+                    {/* Hidden SEO Description */}
+
+                    <p className="sr-only">
+                        Nisha Hair Salon is a professional hair salon and
+                        beauty studio in Gumkhal, Pauri Garhwal,
+                        Uttarakhand offering bridal makeup, haircuts,
+                        hairstyling, facials, hair coloring, waxing,
+                        threading and complete beauty care services.
                     </p>
 
                     {/* Buttons */}
@@ -219,50 +253,55 @@ export default function Hero() {
 
                         <Link
                             to="/booking"
+                            aria-label="Book an appointment at Nisha Hair Salon"
                             className="
-              rounded-2xl
-              bg-gradient-to-r
-              from-[#7c5569]
-              via-[#b58fa2]
-              to-[#d5b48c]
-              px-8
-              py-4
-              font-semibold
-              text-white
-              shadow-[0_20px_60px_rgba(213,180,140,.25)]
-              transition
-              duration-300
-              hover:-translate-y-1
-              hover:shadow-[0_25px_70px_rgba(213,180,140,.4)]
-            "
+                                rounded-2xl
+                                bg-gradient-to-r
+                                from-[#7c5569]
+                                via-[#b58fa2]
+                                to-[#d5b48c]
+                                px-8
+                                py-4
+                                font-semibold
+                                text-white
+                                shadow-[0_20px_60px_rgba(213,180,140,.25)]
+                                transition
+                                duration-300
+                                hover:-translate-y-1
+                                hover:shadow-[0_25px_70px_rgba(213,180,140,.4)]
+                            "
                         >
-                            Book Appointment
+                            Book Your Appointment
                         </Link>
 
                         <a
                             href={waLink}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
+                            aria-label="Book your salon appointment on WhatsApp"
                             className="
-              flex
-              items-center
-              gap-2
-              rounded-2xl
-              border
-              border-white/10
-              bg-white/5
-              px-8
-              py-4
-              font-semibold
-              text-white
-              backdrop-blur-xl
-              transition
-              hover:bg-white/10
-            "
+                                flex
+                                items-center
+                                gap-2
+                                rounded-2xl
+                                border
+                                border-white/10
+                                bg-white/5
+                                px-8
+                                py-4
+                                font-semibold
+                                text-white
+                                backdrop-blur-xl
+                                transition
+                                hover:bg-white/10
+                            "
                         >
-                            <Phone size={18} />
+                            <Phone
+                                size={18}
+                                aria-hidden="true"
+                            />
 
-                            WhatsApp
+                            Book on WhatsApp
                         </a>
 
                     </div>
@@ -273,23 +312,27 @@ export default function Hero() {
 
                         <div>
 
-                            <h3 className="text-3xl font-bold text-white">
+                            <h2 className="text-3xl font-bold text-white">
                                 5000+
-                            </h3>
+                            </h2>
 
                             <p className="mt-1 text-white/50">
-                                Happy Brides
+                                Beautiful Transformations
                             </p>
 
                         </div>
 
                         <div>
 
-                            <div className="flex items-center gap-1">
+                            <div
+                                className="flex items-center gap-1"
+                                aria-label="Rated 4.9 out of 5 by our customers"
+                            >
 
                                 <Star
                                     size={18}
                                     className="fill-[#d5b48c] text-[#d5b48c]"
+                                    aria-hidden="true"
                                 />
 
                                 <span className="text-3xl font-bold text-white">
@@ -304,61 +347,64 @@ export default function Hero() {
 
                         </div>
 
-                    </div>        </div>
+                    </div>
 
-                {/* ================= RIGHT IMAGE ================= */}
+                </div>                {/* ================= RIGHT IMAGE ================= */}
 
                 <div
                     className="
-          relative
-          flex
-          min-h-[780px]
-          items-end
-          justify-center
-        "
+                        relative
+                        flex
+                        min-h-[780px]
+                        items-end
+                        justify-center
+                    "
                 >
 
                     {/* Background Halo */}
 
                     <div
+                        aria-hidden="true"
                         className="
-            bride-glow
-            absolute
-            bottom-16
-            h-[600px]
-            w-[600px]
-            rounded-full
-            bg-[#d5b48c]/20
-            blur-[150px]
-          "
+                            bride-glow
+                            absolute
+                            bottom-16
+                            h-[600px]
+                            w-[600px]
+                            rounded-full
+                            bg-[#d5b48c]/20
+                            blur-[120px]
+                        "
                     />
 
                     {/* Secondary Glow */}
 
                     <div
+                        aria-hidden="true"
                         className="
-            absolute
-            bottom-20
-            h-[420px]
-            w-[420px]
-            rounded-full
-            bg-[#b58fa2]/15
-            blur-[120px]
-          "
+                            absolute
+                            bottom-20
+                            h-[420px]
+                            w-[420px]
+                            rounded-full
+                            bg-[#b58fa2]/15
+                            blur-[100px]
+                        "
                     />
 
                     {/* Decorative Ring */}
 
                     <div
+                        aria-hidden="true"
                         className="
-            absolute
-            bottom-28
-            h-[520px]
-            w-[520px]
-            rounded-full
-            border
-            border-white/10
-          "
+                            absolute
+                            bottom-28
+                            h-[520px]
+                            w-[520px]
+                            rounded-full
+                            border
+                            border-white/10
+                        "
                     />
 
                     {/* Bride */}
@@ -368,20 +414,29 @@ export default function Hero() {
                         <div className="bride-float relative">
 
                             <img
-                                src="/images/bg.png"
-                                alt="Luxury Bridal Makeup"
+                                src="/images/bg.webp"
+                                alt="Professional bridal makeup and hairstyling by Nisha Hair Salon in Gumkhal, Pauri Garhwal"
+                                width={650}
+                                height={760}
+                                loading="eager"
+                                fetchPriority="high"
+                                decoding="async"
+                                draggable="false"
                                 className="
-                h-[760px]
-                w-auto
-                object-contain
-                select-none
-                drop-shadow-[0_40px_100px_rgba(0,0,0,.8)]
-              "
+                                    h-[760px]
+                                    w-auto
+                                    object-contain
+                                    select-none
+                                    drop-shadow-[0_30px_70px_rgba(0,0,0,.7)]
+                                "
                             />
 
                             {/* Shine */}
 
-                            <div className="bride-shine rounded-full" />
+                            <div
+                                aria-hidden="true"
+                                className="bride-shine rounded-full"
+                            />
 
                         </div>
 
@@ -391,28 +446,28 @@ export default function Hero() {
 
                     <div
                         className="
-            absolute
-            right-8
-            top-16
-            z-30
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            px-6
-            py-4
-            backdrop-blur-xl
-            shadow-2xl
-          "
+                            absolute
+                            right-8
+                            top-16
+                            z-30
+                            rounded-3xl
+                            border
+                            border-white/10
+                            bg-white/5
+                            px-6
+                            py-4
+                            backdrop-blur-xl
+                            shadow-2xl
+                        "
                     >
 
                         <p className="text-xs uppercase tracking-[0.3em] text-[#d5b48c]">
                             Premium
                         </p>
 
-                        <h3 className="mt-1 text-lg font-semibold text-white">
+                        <h2 className="mt-1 text-lg font-semibold text-white">
                             Bridal Makeup
-                        </h3>
+                        </h2>
 
                         <p className="mt-1 text-sm text-white/60">
                             Luxury Beauty Studio
@@ -424,28 +479,32 @@ export default function Hero() {
 
                     <div
                         className="
-            absolute
-            bottom-24
-            left-0
-            z-30
-            w-[240px]
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            p-6
-            backdrop-blur-xl
-            shadow-2xl
-          "
+                            absolute
+                            bottom-24
+                            left-0
+                            z-30
+                            w-[240px]
+                            rounded-3xl
+                            border
+                            border-white/10
+                            bg-white/5
+                            p-6
+                            backdrop-blur-xl
+                            shadow-2xl
+                        "
                     >
 
-                        <div className="flex text-[#d5b48c]">
+                        <div
+                            className="flex text-[#d5b48c]"
+                            aria-label="Rated 5 out of 5 stars"
+                        >
 
                             {[...Array(5)].map((_, index) => (
                                 <Star
                                     key={index}
                                     size={16}
                                     fill="currentColor"
+                                    aria-hidden="true"
                                 />
                             ))}
 
@@ -463,10 +522,25 @@ export default function Hero() {
 
                     {/* Floating Sparkles */}
 
-                    <span className="spark sparkle-1"></span>
-                    <span className="spark sparkle-2"></span>
-                    <span className="spark sparkle-3"></span>
-                    <span className="spark sparkle-4"></span>
+                    <span
+                        aria-hidden="true"
+                        className="spark sparkle-1"
+                    />
+
+                    <span
+                        aria-hidden="true"
+                        className="spark sparkle-2"
+                    />
+
+                    <span
+                        aria-hidden="true"
+                        className="spark sparkle-3"
+                    />
+
+                    <span
+                        aria-hidden="true"
+                        className="spark sparkle-4"
+                    />
 
                 </div>
 
@@ -475,17 +549,18 @@ export default function Hero() {
             {/* Bottom Gradient */}
 
             <div
+                aria-hidden="true"
                 className="
-        pointer-events-none
-        absolute
-        inset-x-0
-        bottom-0
-        h-40
-        bg-gradient-to-t
-        from-[#100b0d]
-        via-[#100b0d]/70
-        to-transparent
-      "
+                    pointer-events-none
+                    absolute
+                    inset-x-0
+                    bottom-0
+                    h-40
+                    bg-gradient-to-t
+                    from-[#100b0d]
+                    via-[#100b0d]/70
+                    to-transparent
+                "
             />
 
         </section>
