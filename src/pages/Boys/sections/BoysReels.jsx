@@ -1,7 +1,7 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { BoysReels as reels } from "../../../data/reels";
-import ReelCard from "./ReelCard";
+import ReelCard from "./reelCard";
 
 export default function BoysReels() {
     return (
