@@ -1,6 +1,6 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { Sparkles, ArrowRight } from "lucide-react";
-import { BoysServices as boysServicesData } from "../../../data/services";
+import { BoysServices as boysServicesData } from "../../../data/Services";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -20,139 +20,143 @@ export default function BoysServices() {
 
         <AnimatedSection className="px-4 py-16 sm:px-6 lg:px-8">
 
-
-            <div
+            <section
                 className="
-mx-auto
-max-w-7xl
-overflow-hidden
-rounded-[2.5rem]
-border
-border-white/10
-bg-[#0b0b0b]/90
-p-8
-shadow-[0_20px_60px_rgba(0,0,0,0.6)]
-backdrop-blur-xl
-lg:p-12
-"
+                    mx-auto
+                    max-w-7xl
+                    overflow-hidden
+                    rounded-[2rem]
+                    border
+                    border-white/10
+                    bg-[#0b0b0b]
+                    p-4
+                    shadow-[0_20px_60px_rgba(0,0,0,.6)]
+                    sm:p-10
+                "
             >
 
+                <div
+                    className="
+                        grid
+                        gap-10
+                        lg:grid-cols-2
+                        lg:items-center
+                    "
+                >
 
-                <div className="grid items-center gap-12 lg:grid-cols-2">
 
-
-
-                    {/* LEFT CONTENT */}
-
+                    {/* CONTENT */}
 
                     <div>
 
-
-                        <span
+                        <div
                             className="
-inline-flex
-items-center
-gap-2
-rounded-full
-border
-border-white/10
-bg-white/5
-px-4
-py-2
-text-sm
-font-semibold
-text-[#d4af37]
-"
+                                inline-flex
+                                items-center
+                                gap-2
+                                rounded-full
+                                border
+                                border-white/10
+                                bg-white/5
+                                px-4
+                                py-2
+                                text-sm
+                                font-semibold
+                                text-[#d4af37]
+                            "
                         >
 
                             <Sparkles size={15} />
-                            Our Services
 
-                        </span>
+                            Men's Grooming
 
+                        </div>
 
 
 
                         <h2
                             className="
-mt-5
-text-4xl
-font-black
-leading-tight
-text-white
-lg:text-5xl
-"
+                                mt-5
+                                text-3xl
+                                font-black
+                                leading-tight
+                                text-white
+                                sm:text-5xl
+                            "
                         >
 
-                            Premium grooming
+                            Premium Haircuts
                             <br />
 
-                            for modern men
+                            Beard Styling &
+                            <br />
+
+                            Modern Grooming
 
                         </h2>
 
 
 
+                        <p
+                            className="
+                                mt-5
+                                text-sm
+                                leading-6
+                                text-white/60
+                                sm:text-base
+                            "
+                        >
 
-                        <p className="mt-5 max-w-lg text-white/60">
-
-                            From precision haircuts to beard sculpting and
-                            complete grooming treatments, experience
-                            professional barber care designed for your style.
+                            Professional barber services including
+                            stylish haircuts, beard shaping and complete
+                            grooming treatments for modern men.
 
                         </p>
 
 
 
 
-                        <div className="mt-8 space-y-3">
-
+                        <div className="mt-7 space-y-3">
 
                             {[
-                                "Premium Haircuts & Styling",
-                                "Beard Sculpting & Shaping",
-                                "Hair Color & Texture Treatments",
-                                "Complete Men's Grooming",
+                                "Premium Haircuts",
+                                "Beard Sculpting",
+                                "Hair Styling",
+                                "Complete Grooming"
                             ].map((item, index) => (
-
 
                                 <div
                                     key={item}
                                     className="
-flex
-items-center
-gap-3
-text-white/80
-"
+                                        flex
+                                        items-center
+                                        gap-3
+                                        text-white/80
+                                    "
                                 >
-
 
                                     <span
                                         className="
-flex
-h-8
-w-8
-items-center
-justify-center
-rounded-full
-bg-[#d4af37]
-text-sm
-font-bold
-text-black
-"
+                                            flex
+                                            h-7
+                                            w-7
+                                            items-center
+                                            justify-center
+                                            rounded-full
+                                            bg-[#d4af37]
+                                            text-xs
+                                            font-bold
+                                            text-black
+                                        "
                                     >
-                                        0{index + 1}
+                                        {index + 1}
                                     </span>
-
 
                                     {item}
 
-
                                 </div>
 
-
                             ))}
-
 
                         </div>
 
@@ -162,30 +166,27 @@ text-black
                         <a
                             href="/services"
                             className="
-mt-10
-inline-flex
-items-center
-gap-2
-rounded-2xl
-bg-gradient-to-r
-from-[#8b6508]
-via-[#d4af37]
-to-[#f5d76e]
-px-7
-py-3.5
-font-bold
-text-black
-transition
-hover:scale-105
-"
+                                mt-8
+                                inline-flex
+                                items-center
+                                gap-2
+                                rounded-xl
+                                bg-gradient-to-r
+                                from-[#8b6508]
+                                via-[#d4af37]
+                                to-[#f5d76e]
+                                px-6
+                                py-3
+                                font-bold
+                                text-black
+                            "
                         >
 
-                            See More Services
+                            Explore Services
 
-                            <ArrowRight size={18} />
+                            <ArrowRight size={17} />
 
                         </a>
-
 
 
                     </div>
@@ -194,38 +195,50 @@ hover:scale-105
 
 
 
-                    {/* RIGHT SLIDER */}
+                    {/* CARDS */}
 
-
-                    <div className="w-full">
-
+                    <div
+                        className="
+                            w-full
+                            max-w-full
+                            overflow-hidden
+                        "
+                    >
 
                         <Swiper
 
-                            modules={[Autoplay, Pagination]}
+                            className="services-swiper"
+
+                            modules={[
+                                Autoplay,
+                                Pagination
+                            ]}
 
                             autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false,
+                                delay: 3000,
+                                disableOnInteraction: false
                             }}
 
                             pagination={{
-                                clickable: true,
+                                clickable: true
                             }}
 
-                            spaceBetween={20}
 
-                            slidesPerView={1}
+                            slidesPerView={2}
+
+                            spaceBetween={10}
 
 
                             breakpoints={{
 
                                 640: {
                                     slidesPerView: 2,
+                                    spaceBetween: 16
                                 },
 
-                                1200: {
+                                1024: {
                                     slidesPerView: 2,
+                                    spaceBetween: 20
                                 }
 
                             }}
@@ -233,52 +246,51 @@ hover:scale-105
                         >
 
 
+
                             {featuredServices.map((service) => (
 
 
                                 <SwiperSlide
                                     key={service.id}
+                                    className="!h-auto"
                                 >
 
 
-                                    <div
+                                    <article
                                         className="
-group
-overflow-hidden
-rounded-[2rem]
-border
-border-white/10
-bg-white/5
-transition
-duration-300
-hover:-translate-y-2
-hover:border-[#d4af37]/40
-hover:shadow-2xl
-"
+                                            h-full
+                                            overflow-hidden
+                                            rounded-2xl
+                                            border
+                                            border-white/10
+                                            bg-white/5
+                                        "
                                     >
 
 
-
-                                        <div className="h-56 overflow-hidden">
-
+                                        <div
+                                            className="
+                                                h-28
+                                                overflow-hidden
+                                                sm:h-48
+                                            "
+                                        >
 
                                             <img
 
                                                 src={service.image}
 
-                                                alt={service.name}
+                                                alt={`${service.name} men's grooming service`}
+
+                                                loading="lazy"
 
                                                 className="
-h-full
-w-full
-object-cover
-transition
-duration-700
-group-hover:scale-110
-"
+                                                    h-full
+                                                    w-full
+                                                    object-cover
+                                                "
 
                                             />
-
 
                                         </div>
 
@@ -286,78 +298,61 @@ group-hover:scale-110
 
 
 
-                                        <div className="p-5">
+                                        <div
+                                            className="
+                                                p-3
+                                                sm:p-5
+                                            "
+                                        >
 
 
                                             <h3
                                                 className="
-text-xl
-font-bold
-text-white
-"
+                                                    line-clamp-2
+                                                    text-sm
+                                                    font-bold
+                                                    text-white
+                                                    sm:text-lg
+                                                "
                                             >
+
                                                 {service.name}
+
                                             </h3>
-
-
-
-
-                                            <p
-                                                className="
-mt-2
-text-sm
-text-white/50
-"
-                                            >
-                                                {service.description}
-                                            </p>
 
 
 
 
                                             <div
                                                 className="
-mt-4
-flex
-items-center
-justify-between
-"
+                                                    mt-3
+                                                    flex
+                                                    items-center
+                                                    justify-between
+                                                "
                                             >
 
-
                                                 <span
                                                     className="
-text-xl
-font-black
-text-[#d4af37]
-"
+                                                        text-sm
+                                                        font-black
+                                                        text-[#d4af37]
+                                                        sm:text-xl
+                                                    "
                                                 >
+
                                                     ₹{service.price}
+
                                                 </span>
-
-
-
-
-                                                <span
-                                                    className="
-text-sm
-text-white/40
-"
-                                                >
-                                                    {service.duration}
-                                                </span>
-
 
 
                                             </div>
 
 
-
                                         </div>
 
 
-
-                                    </div>
+                                    </article>
 
 
                                 </SwiperSlide>
@@ -366,18 +361,16 @@ text-white/40
                             ))}
 
 
-
                         </Swiper>
 
 
                     </div>
 
 
-
                 </div>
 
 
-            </div>
+            </section>
 
 
         </AnimatedSection>

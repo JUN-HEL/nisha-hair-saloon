@@ -15,11 +15,9 @@ export default function Content() {
         hidden: {},
 
         show: {
-
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.12,
             },
-
         },
 
     };
@@ -28,12 +26,9 @@ export default function Content() {
     const item = {
 
         hidden: {
-
             opacity: 0,
-            y: 40,
-
+            y: 25,
         },
-
 
         show: {
 
@@ -41,7 +36,7 @@ export default function Content() {
             y: 0,
 
             transition: {
-                duration: 0.8,
+                duration: 0.6,
                 ease: "easeOut",
             },
 
@@ -70,18 +65,19 @@ export default function Content() {
                 variants={item}
 
                 className="
-                inline-flex
-                items-center
-                gap-2
-                rounded-full
-                bg-white/70
-                px-5
-                py-3
-                text-sm
-                font-medium
-                text-zinc-700
-                shadow-lg
-                backdrop-blur-xl
+                    inline-flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    bg-white/70
+                    px-4
+                    py-2
+                    text-xs
+                    font-semibold
+                    text-zinc-700
+                    shadow-lg
+                    backdrop-blur-xl
+                    sm:text-sm
                 "
 
             >
@@ -106,14 +102,14 @@ export default function Content() {
                 variants={item}
 
                 className="
-                mt-8
-                text-5xl
-                font-black
-                leading-[1]
-                tracking-tight
-                text-zinc-900
-                sm:text-6xl
-                lg:text-7xl
+                    mt-6
+                    text-4xl
+                    font-black
+                    leading-[1]
+                    tracking-tight
+                    text-zinc-900
+                    sm:text-6xl
+                    lg:text-7xl
                 "
 
             >
@@ -126,15 +122,14 @@ export default function Content() {
 
                 <br />
 
-
                 <span
                     className="
-                    bg-gradient-to-r
-                    from-[#7c5569]
-                    via-[#b58fa2]
-                    to-[#d5b48c]
-                    bg-clip-text
-                    text-transparent
+                        bg-gradient-to-r
+                        from-[#7c5569]
+                        via-[#b58fa2]
+                        to-[#d5b48c]
+                        bg-clip-text
+                        text-transparent
                     "
                 >
 
@@ -142,33 +137,31 @@ export default function Content() {
 
                 </span>
 
-
             </motion.h1>
 
 
 
 
 
-            {/* Description */}
+            {/* Short Description */}
 
             <motion.p
 
                 variants={item}
 
                 className="
-                mt-7
-                max-w-xl
-                text-lg
-                leading-8
-                text-zinc-600
+                    mt-5
+                    max-w-md
+                    text-base
+                    leading-7
+                    text-zinc-600
+                    sm:text-lg
                 "
 
             >
 
-                Experience luxury beauty services designed
-                around you. From bridal makeup and elegant
-                hairstyles to complete transformations,
-                we create looks that make every moment special.
+                Bridal makeup, hairstyles &
+                luxury beauty transformations at our Nisha hair salon.
 
             </motion.p>
 
@@ -183,10 +176,11 @@ export default function Content() {
                 variants={item}
 
                 className="
-                mt-10
-                flex
-                flex-wrap
-                gap-4
+                    mt-8
+                    flex
+                    flex-col
+                    gap-3
+                    sm:flex-row
                 "
 
             >
@@ -198,7 +192,7 @@ export default function Content() {
 
                     whileHover={{
                         scale: 1.05,
-                        y: -3,
+                        y: -2,
                     }}
 
                     whileTap={{
@@ -206,27 +200,28 @@ export default function Content() {
                     }}
 
                     className="
-                    flex
-                    items-center
-                    gap-2
-                    rounded-full
-                    bg-gradient-to-r
-                    from-[#7c5569]
-                    via-[#b58fa2]
-                    to-[#d5b48c]
-                    px-8
-                    py-4
-                    font-semibold
-                    text-white
-                    shadow-[0_20px_50px_rgba(236,72,153,.25)]
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-full
+                        bg-gradient-to-r
+                        from-[#7c5569]
+                        via-[#b58fa2]
+                        to-[#d5b48c]
+                        px-7
+                        py-3.5
+                        text-sm
+                        font-bold
+                        text-white
+                        shadow-lg
                     "
 
                 >
 
-                    <CalendarDays size={18} />
+                    <CalendarDays size={17} />
 
-                    Book Appointment
-
+                    Book Now
 
                 </motion.a>
 
@@ -243,25 +238,26 @@ export default function Content() {
                     }}
 
                     className="
-                    flex
-                    items-center
-                    gap-2
-                    rounded-full
-                    bg-white/80
-                    px-8
-                    py-4
-                    font-semibold
-                    text-zinc-700
-                    shadow-lg
-                    backdrop-blur-xl
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-full
+                        bg-white/80
+                        px-7
+                        py-3.5
+                        text-sm
+                        font-bold
+                        text-zinc-700
+                        shadow-lg
+                        backdrop-blur-xl
                     "
 
                 >
 
-                    Explore Looks
+                    Gallery
 
-                    <ArrowRight size={18} />
-
+                    <ArrowRight size={17} />
 
                 </motion.a>
 
@@ -274,15 +270,15 @@ export default function Content() {
 
             {/* Stats */}
 
-
             <motion.div
 
                 variants={item}
 
                 className="
-                mt-14
-                flex
-                gap-12
+                    mt-10
+                    flex
+                    gap-10
+                    sm:mt-14
                 "
 
             >
@@ -292,9 +288,9 @@ export default function Content() {
 
                     <h3
                         className="
-                        text-3xl
-                        font-black
-                        text-zinc-900
+                            text-3xl
+                            font-black
+                            text-zinc-900
                         "
                     >
 
@@ -302,13 +298,11 @@ export default function Content() {
 
                     </h3>
 
+                    <p className="text-sm text-zinc-500">
 
-                    <p className="mt-1 text-zinc-500">
-
-                        Happy Clients
+                        Clients
 
                     </p>
-
 
                 </div>
 
@@ -318,35 +312,37 @@ export default function Content() {
 
                 <div>
 
-
                     <div className="flex items-center gap-2">
-
 
                         <Star
 
-                            size={18}
+                            size={17}
 
                             className="
-                            fill-pink-400
-                            text-pink-400
+                                fill-pink-400
+                                text-pink-400
                             "
 
                         />
 
-
-                        <h3 className="text-3xl font-black">
+                        <h3
+                            className="
+                                text-3xl
+                                font-black
+                                text-zinc-900
+                            "
+                        >
 
                             4.9
 
                         </h3>
 
-
                     </div>
 
 
-                    <p className="mt-1 text-zinc-500">
+                    <p className="text-sm text-zinc-500">
 
-                        Client Rating
+                        Rating
 
                     </p>
 
