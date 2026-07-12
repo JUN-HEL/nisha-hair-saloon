@@ -1,0 +1,87 @@
+import { BoysServices } from "../data/services";
+import Card from "./Card";
+
+const Boys = () => {
+
+  const featured = BoysServices.filter(item => item.featured);
+
+
+  return (
+    <section className="bg-black text-white py-20 px-6">
+
+      {/* Hero */}
+      <div className="max-w-6xl mx-auto rounded-3xl bg-[#171717] shadow-2xl p-10">
+
+        <p className="text-yellow-400 text-sm">
+          Men's Grooming
+        </p>
+
+        <h1 className="text-5xl font-bold mt-3">
+          Premium grooming
+          <br />
+          for modern men
+        </h1>
+
+        <p className="text-gray-400 mt-4 max-w-md">
+          Sharp cuts, beard styling and premium grooming experiences.
+        </p>
+
+
+        <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-full">
+          Explore
+        </button>
+
+
+        <div className="grid md:grid-cols-3 gap-5 mt-10">
+
+          {featured.slice(0,3).map(service => (
+            <Card 
+              key={service.id}
+              data={service}
+            />
+          ))}
+
+        </div>
+
+      </div>
+
+
+
+      {/* All Services */}
+      <div className="max-w-6xl mx-auto mt-16">
+
+        <h2 className="text-3xl font-bold">
+          Fresh cuts.
+          <br/>
+          <span className="text-yellow-400">
+            Premium style.
+          </span>
+        </h2>
+
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+          {BoysServices.map(service => (
+            <Card 
+              key={service.id}
+              data={{
+                ...service,
+                name:
+                service.name
+                .replace("Premium ","")
+                .replace("Complete ","")
+                .replace("Men's ","")
+              }}
+            />
+          ))}
+
+        </div>
+
+      </div>
+
+
+    </section>
+  );
+};
+
+export default Boys;

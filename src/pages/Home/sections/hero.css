@@ -1,0 +1,323 @@
+/* ==========================================================
+   CINEMATIC LIGHT SYSTEM
+========================================================== */
+
+.cinematic-lights {
+
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   MAIN CHAMPAGNE BLOOM
+========================================================== */
+
+.light-bloom {
+
+    position: absolute;
+
+    right: 12%;
+    top: 45%;
+
+    width: 850px;
+    height: 850px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 230, 195, .16) 0%,
+            rgba(255, 220, 180, .10) 30%,
+            rgba(255, 210, 170, .04) 55%,
+            transparent 75%);
+
+    filter: blur(120px);
+
+    animation:
+        bloomPulse 14s ease-in-out infinite;
+}
+
+/* ==========================================================
+   VOLUMETRIC LIGHT BEAMS
+========================================================== */
+
+.light-beam {
+
+    position: absolute;
+
+    top: -20%;
+    height: 170%;
+
+    mix-blend-mode: screen;
+
+    pointer-events: none;
+}
+
+/* ===================== */
+
+.beam-1 {
+
+    right: 16%;
+
+    width: 260px;
+
+    transform: rotate(17deg);
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            rgba(255, 240, 215, .18),
+
+            rgba(255, 235, 205, .10),
+
+            transparent);
+
+    filter: blur(60px);
+
+    animation:
+        beamOne 20s ease-in-out infinite;
+}
+
+/* ===================== */
+
+.beam-2 {
+
+    right: 5%;
+
+    width: 520px;
+
+    transform: rotate(9deg);
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            rgba(255, 220, 185, .08),
+
+            transparent);
+
+    filter: blur(110px);
+
+    animation:
+        beamTwo 24s ease-in-out infinite;
+}
+
+/* ===================== */
+
+.beam-3 {
+
+    right: 28%;
+
+    width: 180px;
+
+    transform: rotate(24deg);
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            rgba(255, 255, 255, .13),
+
+            transparent);
+
+    filter: blur(45px);
+
+    animation:
+        beamThree 16s ease-in-out infinite;
+}
+
+/* ==========================================================
+   ATMOSPHERIC HAZE
+========================================================== */
+
+.light-haze {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(ellipse at 72% 38%,
+
+            rgba(255, 255, 255, .05),
+
+            transparent 60%);
+
+    mix-blend-mode: screen;
+
+    filter: blur(50px);
+
+    animation:
+        hazeMove 20s ease-in-out infinite;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes beamOne {
+
+    0% {
+
+        transform:
+            rotate(17deg) translateX(-35px);
+
+        opacity: .10;
+
+    }
+
+    50% {
+
+        transform:
+            rotate(19deg) translateX(40px);
+
+        opacity: .24;
+
+    }
+
+    100% {
+
+        transform:
+            rotate(17deg) translateX(-35px);
+
+        opacity: .10;
+
+    }
+
+}
+
+/* -------------------------- */
+
+@keyframes beamTwo {
+
+    0% {
+
+        transform:
+            rotate(9deg) translateX(0);
+
+        opacity: .06;
+
+    }
+
+    50% {
+
+        transform:
+            rotate(10deg) translateX(-55px);
+
+        opacity: .12;
+
+    }
+
+    100% {
+
+        transform:
+            rotate(9deg) translateX(0);
+
+        opacity: .06;
+
+    }
+
+}
+
+/* -------------------------- */
+
+@keyframes beamThree {
+
+    0% {
+
+        transform:
+            rotate(24deg);
+
+        opacity: .10;
+
+    }
+
+    50% {
+
+        transform:
+            rotate(22deg);
+
+        opacity: .20;
+
+    }
+
+    100% {
+
+        transform:
+            rotate(24deg);
+
+        opacity: .10;
+
+    }
+
+}
+
+/* -------------------------- */
+
+@keyframes bloomPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(-50%) scale(1);
+
+        opacity: .75;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-50%) scale(1.08);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* -------------------------- */
+
+@keyframes hazeMove {
+
+    0% {
+
+        transform:
+            translateX(-20px);
+
+        opacity: .35;
+
+    }
+
+    50% {
+
+        transform:
+            translateX(30px);
+
+        opacity: .55;
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-20px);
+
+        opacity: .35;
+
+    }
+
+}
