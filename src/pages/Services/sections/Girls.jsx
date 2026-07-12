@@ -1,4 +1,4 @@
-import { GirlsServices } from "../../../data/services";
+import { GirlsServices } from "../../../data/Services";
 import Card from "./Card";
 
 const Girls = () => {
