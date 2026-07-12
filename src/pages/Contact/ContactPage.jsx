@@ -254,14 +254,14 @@ export default function ContactPage() {
 
 
                                     <a
-                                        href="tel:+91XXXXXXXXXX"
+                                        href="tel:+917310944581"
                                         className="
                                             text-zinc-600
                                             hover:text-rose-600
                                         "
                                     >
 
-                                        +91 XXXXX XXXXX
+                                        +91 73109445581
 
                                     </a>
 
@@ -332,7 +332,7 @@ export default function ContactPage() {
 
                         <a
 
-                            href="https://wa.me/91XXXXXXXXXX"
+                            href="https://wa.me/917310944581"
 
                             className="
                                 mt-10

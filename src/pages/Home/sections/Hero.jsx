@@ -42,46 +42,46 @@ export default function Hero() {
             <div
                 aria-hidden="true"
                 className="
-                    absolute
-                    right-[18%]
-                    top-1/2
-                    h-[720px]
-                    w-[720px]
-                    -translate-y-1/2
-                    rounded-full
-                    bg-[#d5b48c]/20
-                    blur-[130px]
-                "
+                        absolute
+                        right-[18%]
+                        top-1/2
+                        h-[720px]
+                        w-[720px]
+                        -translate-y-1/2
+                        rounded-full
+                        bg-[#d5b48c]/20
+                        blur-[130px]
+                    "
             />
 
             {/* Burgundy Atmosphere */}
             <div
                 aria-hidden="true"
                 className="
-                    absolute
-                    -left-48
-                    bottom-0
-                    h-[650px]
-                    w-[650px]
-                    rounded-full
-                    bg-[#7c5569]/25
-                    blur-[130px]
-                "
+                        absolute
+                        -left-48
+                        bottom-0
+                        h-[650px]
+                        w-[650px]
+                        rounded-full
+                        bg-[#7c5569]/25
+                        blur-[130px]
+                    "
             />
 
             {/* Rose Ambient */}
             <div
                 aria-hidden="true"
                 className="
-                    absolute
-                    right-0
-                    top-0
-                    h-[420px]
-                    w-[420px]
-                    rounded-full
-                    bg-[#b58fa2]/15
-                    blur-[120px]
-                "
+                        absolute
+                        right-0
+                        top-0
+                        h-[420px]
+                        w-[420px]
+                        rounded-full
+                        bg-[#b58fa2]/15
+                        blur-[120px]
+                    "
             />
 
             {/* Cinematic Lights */}
@@ -123,34 +123,34 @@ export default function Hero() {
             <div
                 aria-hidden="true"
                 className="
-                    absolute
-                    right-[14%]
-                    top-1/2
-                    h-[620px]
-                    w-[620px]
-                    -translate-y-1/2
-                    rounded-full
-                    border
-                    border-white/5
-                "
+                        absolute
+                        right-[14%]
+                        top-1/2
+                        h-[620px]
+                        w-[620px]
+                        -translate-y-1/2
+                        rounded-full
+                        border
+                        border-white/5
+                    "
             />
 
             {/* ================= CONTENT ================= */}
 
             <div
                 className="
-                    relative
-                    z-10
-                    mx-auto
-                    grid
-                    min-h-screen
-                    max-w-7xl
-                    items-center
-                    gap-12
-                    px-6
-                    py-24
-                    lg:grid-cols-2
-                "
+                        relative
+                        z-10
+                        mx-auto
+                        grid
+                        min-h-screen
+                        max-w-7xl
+                        items-center
+                        gap-12
+                        px-6
+                        py-24
+                        lg:grid-cols-2
+                    "
             >                {/* ================= LEFT ================= */}
 
                 <div>
@@ -159,19 +159,19 @@ export default function Hero() {
 
                     <div
                         className="
-                            inline-flex
-                            items-center
-                            gap-2
-                            rounded-full
-                            border
-                            border-white/10
-                            bg-white/5
-                            px-5
-                            py-2
-                            text-sm
-                            text-[#d5b48c]
-                            backdrop-blur-xl
-                        "
+                                inline-flex
+                                items-center
+                                gap-2
+                                rounded-full
+                                border
+                                border-white/10
+                                bg-white/5
+                                px-5
+                                py-2
+                                text-sm
+                                text-[#d5b48c]
+                                backdrop-blur-xl
+                            "
                     >
                         <Sparkles
                             size={15}
@@ -186,15 +186,15 @@ export default function Hero() {
                     <h1
                         id="hero-heading"
                         className="
-                            mt-8
-                            text-5xl
-                            font-semibold
-                            leading-[1.05]
-                            tracking-[-0.04em]
-                            text-white
-                            md:text-6xl
-                            lg:text-7xl
-                        "
+                                mt-8
+                                text-5xl
+                                font-semibold
+                                leading-[1.05]
+                                tracking-[-0.04em]
+                                text-white
+                                md:text-6xl
+                                lg:text-7xl
+                            "
                     >
                         Luxury Hair &
 
@@ -202,13 +202,13 @@ export default function Hero() {
 
                         <span
                             className="
-                                bg-gradient-to-r
-                                from-[#d5b48c]
-                                via-[#b58fa2]
-                                to-[#d5b48c]
-                                bg-clip-text
-                                text-transparent
-                            "
+                                    bg-gradient-to-r
+                                    from-[#d5b48c]
+                                    via-[#b58fa2]
+                                    to-[#d5b48c]
+                                    bg-clip-text
+                                    text-transparent
+                                "
                         >
                             Bridal Makeup
                         </span>
@@ -222,12 +222,12 @@ export default function Hero() {
 
                     <p
                         className="
-                            mt-7
-                            max-w-xl
-                            text-lg
-                            leading-8
-                            text-white/65
-                        "
+                                mt-7
+                                max-w-xl
+                                text-lg
+                                leading-8
+                                text-white/65
+                            "
                     >
                         Experience premium bridal makeup, hairstyling,
                         haircuts, hair coloring, facials, skincare and
@@ -255,21 +255,21 @@ export default function Hero() {
                             to="/booking"
                             aria-label="Book an appointment at Nisha Hair Salon"
                             className="
-                                rounded-2xl
-                                bg-gradient-to-r
-                                from-[#7c5569]
-                                via-[#b58fa2]
-                                to-[#d5b48c]
-                                px-8
-                                py-4
-                                font-semibold
-                                text-white
-                                shadow-[0_20px_60px_rgba(213,180,140,.25)]
-                                transition
-                                duration-300
-                                hover:-translate-y-1
-                                hover:shadow-[0_25px_70px_rgba(213,180,140,.4)]
-                            "
+                                    rounded-2xl
+                                    bg-gradient-to-r
+                                    from-[#7c5569]
+                                    via-[#b58fa2]
+                                    to-[#d5b48c]
+                                    px-8
+                                    py-4
+                                    font-semibold
+                                    text-white
+                                    shadow-[0_20px_60px_rgba(213,180,140,.25)]
+                                    transition
+                                    duration-300
+                                    hover:-translate-y-1
+                                    hover:shadow-[0_25px_70px_rgba(213,180,140,.4)]
+                                "
                         >
                             Book Your Appointment
                         </Link>
@@ -280,21 +280,21 @@ export default function Hero() {
                             rel="noopener noreferrer"
                             aria-label="Book your salon appointment on WhatsApp"
                             className="
-                                flex
-                                items-center
-                                gap-2
-                                rounded-2xl
-                                border
-                                border-white/10
-                                bg-white/5
-                                px-8
-                                py-4
-                                font-semibold
-                                text-white
-                                backdrop-blur-xl
-                                transition
-                                hover:bg-white/10
-                            "
+                                    flex
+                                    items-center
+                                    gap-2
+                                    rounded-2xl
+                                    border
+                                    border-white/10
+                                    bg-white/5
+                                    px-8
+                                    py-4
+                                    font-semibold
+                                    text-white
+                                    backdrop-blur-xl
+                                    transition
+                                    hover:bg-white/10
+                                "
                         >
                             <Phone
                                 size={18}
@@ -353,12 +353,12 @@ export default function Hero() {
 
                 <div
                     className="
-                        relative
-                        flex
-                        min-h-[780px]
-                        items-end
-                        justify-center
-                    "
+                            relative
+                            flex
+                            min-h-[780px]
+                            items-end
+                            justify-center
+                        "
                 >
 
                     {/* Background Halo */}
@@ -366,15 +366,15 @@ export default function Hero() {
                     <div
                         aria-hidden="true"
                         className="
-                            bride-glow
-                            absolute
-                            bottom-16
-                            h-[600px]
-                            w-[600px]
-                            rounded-full
-                            bg-[#d5b48c]/20
-                            blur-[120px]
-                        "
+                                bride-glow
+                                absolute
+                                bottom-16
+                                h-[600px]
+                                w-[600px]
+                                rounded-full
+                                bg-[#d5b48c]/20
+                                blur-[120px]
+                            "
                     />
 
                     {/* Secondary Glow */}
@@ -382,14 +382,14 @@ export default function Hero() {
                     <div
                         aria-hidden="true"
                         className="
-                            absolute
-                            bottom-20
-                            h-[420px]
-                            w-[420px]
-                            rounded-full
-                            bg-[#b58fa2]/15
-                            blur-[100px]
-                        "
+                                absolute
+                                bottom-20
+                                h-[420px]
+                                w-[420px]
+                                rounded-full
+                                bg-[#b58fa2]/15
+                                blur-[100px]
+                            "
                     />
 
                     {/* Decorative Ring */}
@@ -397,14 +397,14 @@ export default function Hero() {
                     <div
                         aria-hidden="true"
                         className="
-                            absolute
-                            bottom-28
-                            h-[520px]
-                            w-[520px]
-                            rounded-full
-                            border
-                            border-white/10
-                        "
+                                absolute
+                                bottom-28
+                                h-[520px]
+                                w-[520px]
+                                rounded-full
+                                border
+                                border-white/10
+                            "
                     />
 
                     {/* Bride */}
@@ -423,12 +423,12 @@ export default function Hero() {
                                 decoding="async"
                                 draggable="false"
                                 className="
-                                    h-[760px]
-                                    w-auto
-                                    object-contain
-                                    select-none
-                                    drop-shadow-[0_30px_70px_rgba(0,0,0,.7)]
-                                "
+                                        h-[760px]
+                                        w-auto
+                                        object-contain
+                                        select-none
+                                        drop-shadow-[0_30px_70px_rgba(0,0,0,.7)]
+                                    "
                             />
 
                             {/* Shine */}
@@ -446,19 +446,19 @@ export default function Hero() {
 
                     <div
                         className="
-                            absolute
-                            right-8
-                            top-16
-                            z-30
-                            rounded-3xl
-                            border
-                            border-white/10
-                            bg-white/5
-                            px-6
-                            py-4
-                            backdrop-blur-xl
-                            shadow-2xl
-                        "
+                                absolute
+                                right-8
+                                top-16
+                                z-30
+                                rounded-3xl
+                                border
+                                border-white/10
+                                bg-white/5
+                                px-6
+                                py-4
+                                backdrop-blur-xl
+                                shadow-2xl
+                            "
                     >
 
                         <p className="text-xs uppercase tracking-[0.3em] text-[#d5b48c]">
@@ -479,19 +479,19 @@ export default function Hero() {
 
                     <div
                         className="
-                            absolute
-                            bottom-24
-                            left-0
-                            z-30
-                            w-[240px]
-                            rounded-3xl
-                            border
-                            border-white/10
-                            bg-white/5
-                            p-6
-                            backdrop-blur-xl
-                            shadow-2xl
-                        "
+                                absolute
+                                bottom-24
+                                left-0
+                                z-30
+                                w-[240px]
+                                rounded-3xl
+                                border
+                                border-white/10
+                                bg-white/5
+                                p-6
+                                backdrop-blur-xl
+                                shadow-2xl
+                            "
                     >
 
                         <div
@@ -551,16 +551,16 @@ export default function Hero() {
             <div
                 aria-hidden="true"
                 className="
-                    pointer-events-none
-                    absolute
-                    inset-x-0
-                    bottom-0
-                    h-40
-                    bg-gradient-to-t
-                    from-[#100b0d]
-                    via-[#100b0d]/70
-                    to-transparent
-                "
+                        pointer-events-none
+                        absolute
+                        inset-x-0
+                        bottom-0
+                        h-40
+                        bg-gradient-to-t
+                        from-[#100b0d]
+                        via-[#100b0d]/70
+                        to-transparent
+                    "
             />
 
         </section>

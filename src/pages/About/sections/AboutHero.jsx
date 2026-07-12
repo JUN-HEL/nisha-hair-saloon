@@ -1,410 +1,125 @@
 import { motion } from "framer-motion";
-import { Sparkles, Scissors } from "lucide-react";
+import { Scissors, Sparkles } from "lucide-react";
 
+const stats = [
+    {
+        number: "25+",
+        label: "Years of Experience",
+    },
+    {
+        number: "500+",
+        label: "Happy Clients",
+    },
+    {
+        number: "100+",
+        label: "Bridal Looks",
+    },
+    {
+        number: "4.9★",
+        label: "Client Rating",
+    },
+];
 
-const AboutHero = () => {
-
-    const stats = [
-        ["25+", "Years Experience"],
-        ["500+", "Happy Clients"],
-        ["100+", "Bridal Makeovers"],
-        ["4.9★", "Customer Rating"],
-    ];
-
-
+export default function AboutHero() {
     return (
-
         <section
             aria-label="About Nisha Hair Salon Gumkhal"
-            className="
-                relative
-                overflow-hidden
-                bg-gradient-to-b
-                from-rose-50
-                via-white
-                to-white
-                py-20
-                lg:py-32
-            "
+            className="bg-[#fdf8f3] py-24"
         >
+            <div className="mx-auto max-w-7xl px-6">
 
+                <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
 
-            {/* Background */}
-
-            <div
-                className="
-                    absolute
-                    -left-24
-                    top-0
-                    h-72
-                    w-72
-                    rounded-full
-                    bg-pink-200/30
-                    blur-3xl
-                "
-            />
-
-            <div
-                className="
-                    absolute
-                    -right-24
-                    bottom-0
-                    h-80
-                    w-80
-                    rounded-full
-                    bg-amber-200/30
-                    blur-3xl
-                "
-            />
-
-
-
-
-            <div className="container relative mx-auto px-6">
-
-                <div className="mx-auto max-w-4xl text-center">
-
-
-
-                    {/* Badge */}
-
+                    {/* Text */}
                     <motion.div
-
-                        initial={{
-                            opacity: 0,
-                            y: 25
-                        }}
-
-                        whileInView={{
-                            opacity: 1,
-                            y: 0
-                        }}
-
-                        viewport={{
-                            once: true
-                        }}
-
-                        transition={{
-                            duration: .6
-                        }}
-
-                        className="
-                            inline-flex
-                            items-center
-                            gap-2
-                            rounded-full
-                            border
-                            border-rose-200
-                            bg-white
-                            px-5
-                            py-2
-                            shadow-sm
-                        "
-
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                     >
 
-                        <Sparkles
-                            className="h-4 w-4 text-rose-500"
-                        />
-
-
-                        <span
-                            className="
-                                text-sm
-                                font-semibold
-                                text-rose-700
-                            "
-                        >
-
-                            Premium Beauty Salon
-
-                        </span>
-
-
-                    </motion.div>
-
-
-
-
-
-
-                    {/* SEO Heading */}
-
-                    <motion.h1
-
-                        initial={{
-                            opacity: 0,
-                            y: 25
-                        }}
-
-                        whileInView={{
-                            opacity: 1,
-                            y: 0
-                        }}
-
-                        viewport={{
-                            once: true
-                        }}
-
-                        transition={{
-                            delay: .15,
-                            duration: .7
-                        }}
-
-                        className="
-                            mt-8
-                            text-4xl
-                            font-extrabold
-                            leading-tight
-
-                            md:text-6xl
-                            lg:text-7xl
-                        "
-
-                    >
-
-                        About{" "}
-
-                        <span
-                            className="
-                                bg-gradient-to-r
-                                from-[#7c5569]
-                                via-[#b58fa2]
-                                to-[#d5b48c]
-                                bg-clip-text
-                                text-transparent
-                            "
-                        >
-
-                            Nisha Hair Salon Gumkhal
-
-                        </span>
-
-
-                    </motion.h1>
-
-
-
-
-
-
-
-                    {/* SEO Description */}
-
-                    <motion.p
-
-                        initial={{
-                            opacity: 0,
-                            y: 25
-                        }}
-
-                        whileInView={{
-                            opacity: 1,
-                            y: 0
-                        }}
-
-                        viewport={{
-                            once: true
-                        }}
-
-                        transition={{
-                            delay: .3,
-                            duration: .7
-                        }}
-
-                        className="
-                            mx-auto
-                            mt-7
-                            max-w-3xl
-                            text-lg
-                            leading-8
-                            text-gray-600
-                        "
-
-                    >
-
-                        Nisha Hair Salon in Gumkhal offers professional
-                        hair styling, bridal makeup, beauty treatments,
-                        and personalized salon services designed to enhance
-                        your confidence and style.
-
-
-                    </motion.p>
-
-
-
-
-
-
-
-                    {/* CTA */}
-
-                    <motion.div
-
-                        initial={{
-                            opacity: 0,
-                            y: 25
-                        }}
-
-                        whileInView={{
-                            opacity: 1,
-                            y: 0
-                        }}
-
-                        viewport={{
-                            once: true
-                        }}
-
-                        transition={{
-                            delay: .4,
-                            duration: .7
-                        }}
-
-                        className="
-                            mt-10
-                            flex
-                            justify-center
-                        "
-
-                    >
-
-
-                        <a
-
-                            href="/services"
-
-                            aria-label="Explore Nisha Hair Salon services"
-
-                            className="
-                                flex
-                                items-center
-                                gap-2
-                                rounded-full
-                                border
-                                border-[#b58fa2]
-                                px-6
-                                py-3
-                                font-semibold
-                                text-[#7c5569]
-                                transition
-
-                                hover:bg-[#7c5569]
-                                hover:text-white
-                            "
-
-                        >
-
-                            <Scissors size={18} />
-
-                            Explore Services
-
-
-                        </a>
-
-
-                    </motion.div>
-
-
-
-
-
-
-
-                    {/* Stats */}
-
-                    <motion.div
-
-                        initial={{
-                            opacity: 0
-                        }}
-
-                        whileInView={{
-                            opacity: 1
-                        }}
-
-                        viewport={{
-                            once: true
-                        }}
-
-                        transition={{
-                            delay: .6
-                        }}
-
-                        className="
-                            mt-16
-                            grid
-                            gap-5
-
-                            sm:grid-cols-2
-                            lg:grid-cols-4
-                        "
-
-                    >
-
-                        {stats.map(([number, label]) => (
-
-                            <div
-
-                                key={label}
-
-                                className="
-                                    rounded-3xl
-                                    border
-                                    border-white/40
-                                    bg-white/60
-                                    p-7
-                                    shadow-lg
-                                    backdrop-blur-xl
-                                "
-
+                        <div className="flex items-center gap-3 text-[#8a5d70]">
+                            <span className="h-px w-10 bg-[#8a5d70]" />
+
+                            <span className="text-sm font-medium uppercase tracking-[0.25em]">
+                                Since 1999 • Gumkhal
+                            </span>
+                        </div>
+
+
+                        <h1 className="mt-8 text-5xl font-semibold leading-[1.1] text-zinc-900 md:text-6xl">
+                            Beauty, Style &
+                            <span className="block text-[#8a5d70]">
+                                Trust for 25+ Years
+                            </span>
+                        </h1>
+
+
+                        <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-600">
+                            Nisha Hair Salon has been a trusted beauty destination
+                            in Gumkhal, Pauri Garhwal for over 25 years.
+                            We create beautiful hairstyles, bridal makeovers,
+                            and personalized beauty services with experience
+                            and care.
+                        </p>
+
+
+                        <div className="mt-8">
+                            <a
+                                href="/services"
+                                className="inline-flex items-center gap-2 rounded-full bg-[#8a5d70] px-7 py-3 font-medium text-white transition hover:bg-[#734c5d]"
                             >
+                                <Scissors size={18} />
+                                View Services
+                            </a>
+                        </div>
 
-                                <h2
-
-                                    className="
-                                        text-4xl
-                                        font-bold
-                                        bg-gradient-to-r
-                                        from-[#7c5569]
-                                        via-[#b58fa2]
-                                        to-[#d5b48c]
-                                        bg-clip-text
-                                        text-transparent
-                                    "
-
-                                >
-
-                                    {number}
-
-                                </h2>
+                    </motion.div>
 
 
-                                <p className="mt-2 text-gray-600">
 
-                                    {label}
+                    {/* Right */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="relative"
+                    >
 
-                                </p>
+                        <div className="rounded-[2rem] bg-white p-8 shadow-[0_20px_60px_rgba(70,40,30,0.12)]">
 
+                            <div className="mb-8 flex items-center gap-3 text-[#8a5d70]">
+                                <Sparkles size={22} />
 
+                                <span className="font-medium">
+                                    Our Journey
+                                </span>
                             </div>
 
-                        ))}
 
+                            <div className="space-y-6">
+                                {stats.map((item) => (
+                                    <div
+                                        key={item.label}
+                                        className="flex items-center justify-between border-b border-zinc-100 pb-5 last:border-none"
+                                    >
+                                        <span className="text-zinc-600">
+                                            {item.label}
+                                        </span>
+
+                                        <span className="text-3xl font-semibold text-[#8a5d70]">
+                                            {item.number}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
 
                     </motion.div>
-
-
 
                 </div>
 
-
             </div>
-
-
         </section>
-
     );
-};
-
-
-export default AboutHero;
+}

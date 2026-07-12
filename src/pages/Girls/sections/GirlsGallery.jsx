@@ -1,63 +1,80 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
-
-const images = [
-    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
-];
+import { ArrowRight } from "lucide-react";
+import { GirlsServices } from "../../../data/services";
 
 export default function GirlsGallery() {
+    const galleryImages = GirlsServices
+        .filter((service) => service.featured && service.image)
+        .slice(0, 4);
+
     return (
-        <AnimatedSection className="px-4 py-10 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-7xl">
-                <div className="max-w-2xl">
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7c5569]">
-                        Beauty Gallery
-                    </p>
-                    <h2 className="mt-3 text-3xl font-bold text-zinc-900 sm:text-4xl">
-                        Elegant looks, polished details, beautiful moments
-                    </h2>
-                    <p className="mt-4 text-zinc-600">
-                        Replace these with your real salon and bridal photos later. Real work
-                        always lands harder than stock sparkle.
-                    </p>
+        <AnimatedSection className="px-4 py-12 sm:px-6 lg:px-8">
+            <section
+                id="gallery"
+                aria-labelledby="gallery-heading"
+            >
+                <div className="mx-auto max-w-7xl">
+
+                    <header className="max-w-3xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7c5569]">
+                            Our Portfolio
+                        </p>
+
+                        <h2
+                            id="gallery-heading"
+                            className="mt-3 text-3xl font-bold text-zinc-900 sm:text-4xl"
+                        >
+                            Bridal Makeup & Beauty Gallery – Nisha Hair Salon,
+                            Gumkhal, Pauri Garhwal
+                        </h2>
+
+                        <p className="mt-4 text-lg leading-7 text-zinc-600">
+                            Explore our bridal makeup, party makeup, hair styling,
+                            hair colouring, skincare, and beauty transformations
+                            from Nisha Hair Salon.
+                        </p>
+                    </header>
+
+                    <div className="mt-10 grid auto-rows-[220px] gap-4 md:grid-cols-4">
+                        {galleryImages.map((service, index) => (
+                            <figure
+                                key={service.id}
+                                className={`group overflow-hidden rounded-[1.75rem]
+                                    ${index === 0
+                                        ? "md:col-span-2 md:row-span-2"
+                                        : index === 3
+                                            ? "md:col-span-2"
+                                            : ""
+                                    }`}
+                            >
+                                <img
+                                    src={service.image}
+                                    alt={`${service.name} service at Nisha Hair Salon Gumkhal Pauri Garhwal`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                />
+                            </figure>
+                        ))}
+                    </div>
+
+                    <div className="mt-12 flex justify-center">
+                        <a
+                            href="/gallery"
+                            aria-label="View full gallery of Nisha Hair Salon"
+                            className="group inline-flex items-center gap-2 rounded-full bg-[#7c5569] px-8 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#68465a]"
+                        >
+                            View Full Gallery
+
+                            <ArrowRight
+                                size={18}
+                                className="transition-transform duration-300 group-hover:translate-x-1"
+                            />
+                        </a>
+                    </div>
+
                 </div>
-
-                <div className="mt-10 grid auto-rows-[220px] gap-4 md:grid-cols-4">
-                    <div className="overflow-hidden rounded-[1.75rem] md:col-span-2 md:row-span-2">
-                        <img
-                            src={images[0]}
-                            alt="Girls gallery 1"
-                            className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                        />
-                    </div>
-
-                    <div className="overflow-hidden rounded-[1.75rem]">
-                        <img
-                            src={images[1]}
-                            alt="Girls gallery 2"
-                            className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                        />
-                    </div>
-
-                    <div className="overflow-hidden rounded-[1.75rem]">
-                        <img
-                            src={images[2]}
-                            alt="Girls gallery 3"
-                            className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                        />
-                    </div>
-
-                    <div className="overflow-hidden rounded-[1.75rem] md:col-span-2">
-                        <img
-                            src={images[3]}
-                            alt="Girls gallery 4"
-                            className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                        />
-                    </div>
-                </div>
-            </div>
+            </section>
         </AnimatedSection>
     );
 }

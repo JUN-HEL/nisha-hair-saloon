@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Nisha Hair Salon",
-  locationShort: "gumkhal, pauri",
+  locationShort: "gumkhal, pauri garhwal, uttrakhand",
   phone: "+91731094457",
-  whatsapp: "919876543210",
+  whatsapp: "917310944581",
   maps: "https://maps.app.goo.gl/NSrFGAdKX3tQn4XH7",
-  instagram: "https://www.instagram.com/the_mountain_mirage",
+  instagram: "https://www.instagram.com/the_styling_nawed",
   address:
-    "Panshet, Ghol Road, Saiv Kh, Pune, Maharashtra 412107",
+    "Gumkhal, Pauri Garhwal, Uttrakhand",
 };

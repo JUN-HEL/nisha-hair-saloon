@@ -1,111 +1,116 @@
 import { motion } from "framer-motion";
 import {
     Scissors,
-    Award,
     ShieldCheck,
     Sparkles,
     HeartHandshake,
-    Star,
 } from "lucide-react";
 
 const features = [
     {
         icon: Scissors,
-        title: "Professional Stylists",
+        title: "Experienced Stylists",
         description:
-            "Our experienced stylists bring creativity, precision, and the latest trends to every haircut and makeover.",
-    },
-    {
-        icon: Award,
-        title: "Premium Products",
-        description:
-            "We use only trusted salon-quality products to ensure healthy hair and long-lasting beauty.",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Hygiene First",
-        description:
-            "Every tool is sanitized, every station is cleaned, and your comfort is always our priority.",
-    },
-    {
-        icon: HeartHandshake,
-        title: "Personalized Care",
-        description:
-            "Every client is unique. We recommend styles and treatments that suit your personality.",
+            "Professional haircuts, styling, bridal hairstyles, and beauty services handled with care and attention to detail.",
     },
     {
         icon: Sparkles,
-        title: "Luxury Experience",
+        title: "Complete Beauty Services",
         description:
-            "Relax in a calm, elegant atmosphere while enjoying professional beauty services.",
+            "From bridal makeup and party makeup to hair colouring and treatments, we offer services for every occasion.",
     },
     {
-        icon: Star,
-        title: "Trusted by Clients",
+        icon: ShieldCheck,
+        title: "Clean & Comfortable Salon",
         description:
-            "Our customers keep coming back because they love the quality, care, and experience.",
+            "A hygienic and relaxing environment where every client feels comfortable during their beauty session.",
+    },
+    {
+        icon: HeartHandshake,
+        title: "Personal Attention",
+        description:
+            "We understand your style preferences and suggest looks that suit your personality and requirements.",
     },
 ];
 
-const WhyChooseUs = () => {
+export default function WhyChooseUs() {
     return (
-        <section className="bg-[#FDF8F4] py-24">
-            <div className="container mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center"
-                >
-                    <p className="font-semibold uppercase tracking-[4px] text-[#b58fa2]">
-                        Why Choose Us
-                    </p>
+        <section className="bg-white py-20">
+            <div className="mx-auto max-w-6xl px-6">
 
-                    <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-                        Experience Beauty with{" "}
-                        <span className="bg-gradient-to-r from-[#7c5569] via-[#b58fa2] to-[#d5b48c] bg-clip-text text-transparent">
-                            Confidence
-                        </span>
-                    </h2>
+                <div className="grid gap-12 md:grid-cols-2 md:items-center">
 
-                    <p className="mx-auto mt-6 max-w-2xl text-gray-600">
-                        We combine creativity, premium products, and exceptional customer
-                        service to provide an unforgettable salon experience.
-                    </p>
-                </motion.div>
+                    {/* Left */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <p className="text-sm uppercase tracking-[3px] text-[#7c5569]">
+                            About Our Salon
+                        </p>
 
-                <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-                    {features.map((feature, index) => {
-                        const Icon = feature.icon;
+                        <h2 className="mt-4 text-3xl font-bold leading-tight text-zinc-900 md:text-5xl">
+                            Beauty services with care,
+                            <span className="block text-[#7c5569]">
+                                style & experience
+                            </span>
+                        </h2>
 
-                        return (
-                            <motion.div
-                                key={feature.title}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                whileHover={{ y: -10 }}
-                                className="group glass-card rounded-3xl border border-white/40 bg-white/70 p-8 shadow-lg transition-all duration-500 hover:shadow-2xl"
-                            >
-                                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-[#7c5569] to-[#d5b48c] text-white transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                                    <Icon size={30} />
-                                </div>
+                        <p className="mt-6 leading-8 text-zinc-600">
+                            Nisha Hair Salon in Gumkhal, Pauri Garhwal provides
+                            professional hair, makeup, and beauty services with a
+                            focus on quality, hygiene, and personalized care.
+                            Whether it is a wedding, special event, or regular
+                            grooming, we help you achieve a look that feels right
+                            for you.
+                        </p>
+                    </motion.div>
 
-                                <h3 className="mt-8 text-2xl font-semibold text-[#7c5569]">
-                                    {feature.title}
-                                </h3>
 
-                                <p className="mt-4 leading-7 text-gray-600">
-                                    {feature.description}
-                                </p>
-                            </motion.div>
-                        );
-                    })}
+                    {/* Right */}
+                    <div className="space-y-6">
+                        {features.map((item, index) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <motion.div
+                                    key={item.title}
+                                    initial={{
+                                        opacity: 0,
+                                        x: 20,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        x: 0,
+                                    }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        delay: index * 0.1,
+                                    }}
+                                    className="flex gap-5 border-b border-zinc-200 pb-6 last:border-none"
+                                >
+                                    <div className="mt-1 text-[#7c5569]">
+                                        <Icon size={28} />
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-zinc-900">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="mt-2 leading-7 text-zinc-600">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+
                 </div>
+
             </div>
         </section>
     );
-};
-
-export default WhyChooseUs;
+}

@@ -1,18 +1,45 @@
-/* ==========================================================
-   CINEMATIC LIGHT SYSTEM
-========================================================== */
+/* ==============================
+   LUXURY BRIDAL HERO
+============================== */
+
+
+.bride-reveal {
+
+    animation:
+        luxuryReveal 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
+
+}
+
+
+
+.bride-float {
+
+    animation:
+        luxuryFloat 8s ease-in-out infinite;
+
+}
+
+
+
+.bride-glow {
+
+    animation:
+        luxuryGlow 10s ease-in-out infinite;
+
+}
+
+
 
 .cinematic-lights {
 
     position: absolute;
     inset: 0;
-    overflow: hidden;
     pointer-events: none;
+    overflow: hidden;
+
 }
 
-/* ==========================================================
-   MAIN CHAMPAGNE BLOOM
-========================================================== */
+
 
 .light-bloom {
 
@@ -21,125 +48,28 @@
     right: 12%;
     top: 45%;
 
-    width: 850px;
-    height: 850px;
-
-    transform: translateY(-50%);
+    width: 650px;
+    height: 650px;
 
     border-radius: 50%;
 
     background:
+
         radial-gradient(circle,
-            rgba(255, 230, 195, .16) 0%,
-            rgba(255, 220, 180, .10) 30%,
-            rgba(255, 210, 170, .04) 55%,
-            transparent 75%);
+            rgba(213, 180, 140, .18),
+            transparent 65%);
 
-    filter: blur(120px);
-
-    animation:
-        bloomPulse 14s ease-in-out infinite;
-}
-
-/* ==========================================================
-   VOLUMETRIC LIGHT BEAMS
-========================================================== */
-
-.light-beam {
-
-    position: absolute;
-
-    top: -20%;
-    height: 170%;
-
-    mix-blend-mode: screen;
-
-    pointer-events: none;
-}
-
-/* ===================== */
-
-.beam-1 {
-
-    right: 16%;
-
-    width: 260px;
-
-    transform: rotate(17deg);
-
-    background:
-
-        linear-gradient(90deg,
-
-            transparent,
-
-            rgba(255, 240, 215, .18),
-
-            rgba(255, 235, 205, .10),
-
-            transparent);
-
-    filter: blur(60px);
+    filter:
+        blur(90px);
 
     animation:
-        beamOne 20s ease-in-out infinite;
+        luxuryBloom 12s ease-in-out infinite;
+
 }
 
-/* ===================== */
 
-.beam-2 {
 
-    right: 5%;
-
-    width: 520px;
-
-    transform: rotate(9deg);
-
-    background:
-
-        linear-gradient(90deg,
-
-            transparent,
-
-            rgba(255, 220, 185, .08),
-
-            transparent);
-
-    filter: blur(110px);
-
-    animation:
-        beamTwo 24s ease-in-out infinite;
-}
-
-/* ===================== */
-
-.beam-3 {
-
-    right: 28%;
-
-    width: 180px;
-
-    transform: rotate(24deg);
-
-    background:
-
-        linear-gradient(90deg,
-
-            transparent,
-
-            rgba(255, 255, 255, .13),
-
-            transparent);
-
-    filter: blur(45px);
-
-    animation:
-        beamThree 16s ease-in-out infinite;
-}
-
-/* ==========================================================
-   ATMOSPHERIC HAZE
-========================================================== */
+/* Very subtle studio haze */
 
 .light-haze {
 
@@ -147,197 +77,166 @@
 
     inset: 0;
 
+
     background:
 
-        radial-gradient(ellipse at 72% 38%,
-
-            rgba(255, 255, 255, .05),
-
+        radial-gradient(ellipse at 70% 45%,
+            rgba(255, 255, 255, .04),
             transparent 60%);
 
-    mix-blend-mode: screen;
+}
 
-    filter: blur(50px);
+
+
+/* Minimal dust */
+
+.particle {
+
+    opacity: .25;
 
     animation:
-        hazeMove 20s ease-in-out infinite;
-}
-
-/* ==========================================================
-   ANIMATIONS
-========================================================== */
-
-@keyframes beamOne {
-
-    0% {
-
-        transform:
-            rotate(17deg) translateX(-35px);
-
-        opacity: .10;
-
-    }
-
-    50% {
-
-        transform:
-            rotate(19deg) translateX(40px);
-
-        opacity: .24;
-
-    }
-
-    100% {
-
-        transform:
-            rotate(17deg) translateX(-35px);
-
-        opacity: .10;
-
-    }
+        dustFloat 12s linear infinite;
 
 }
 
-/* -------------------------- */
 
-@keyframes beamTwo {
 
-    0% {
+/* ==============================
+   MOTION
+============================== */
+
+
+@keyframes luxuryReveal {
+
+    from {
+
+        opacity: 0;
 
         transform:
-            rotate(9deg) translateX(0);
+            translateY(50px) scale(.97);
 
-        opacity: .06;
+        filter:
+            blur(8px);
 
     }
 
-    50% {
+
+    to {
+
+        opacity: 1;
 
         transform:
-            rotate(10deg) translateX(-55px);
+            translateY(0) scale(1);
 
-        opacity: .12;
-
-    }
-
-    100% {
-
-        transform:
-            rotate(9deg) translateX(0);
-
-        opacity: .06;
+        filter:
+            blur(0);
 
     }
 
 }
 
-/* -------------------------- */
 
-@keyframes beamThree {
 
-    0% {
-
-        transform:
-            rotate(24deg);
-
-        opacity: .10;
-
-    }
-
-    50% {
-
-        transform:
-            rotate(22deg);
-
-        opacity: .20;
-
-    }
-
-    100% {
-
-        transform:
-            rotate(24deg);
-
-        opacity: .10;
-
-    }
-
-}
-
-/* -------------------------- */
-
-@keyframes bloomPulse {
+@keyframes luxuryFloat {
 
     0%,
     100% {
 
         transform:
-            translateY(-50%) scale(1);
-
-        opacity: .75;
+            translateY(0);
 
     }
 
     50% {
 
         transform:
-            translateY(-50%) scale(1.08);
-
-        opacity: 1;
+            translateY(-10px);
 
     }
 
 }
 
-/* -------------------------- */
 
-@keyframes hazeMove {
 
-    0% {
+@keyframes luxuryGlow {
 
-        transform:
-            translateX(-20px);
-
-        opacity: .35;
-
-    }
-
-    50% {
-
-        transform:
-            translateX(30px);
-
-        opacity: .55;
-
-    }
-
+    0%,
     100% {
 
-        transform:
-            translateX(-20px);
+        opacity: .4;
 
-        opacity: .35;
+        transform:
+            scale(1);
+
+    }
+
+
+    50% {
+
+        opacity: .6;
+
+        transform:
+            scale(1.04);
 
     }
 
 }
 
-@media (prefers-reduced-motion: reduce) {
 
-    .particle,
-    .spark,
-    .light-beam,
-    .light-bloom,
-    .light-haze,
-    .bride-float,
-    .bride-reveal,
-    .bride-shine {
-        animation: none !important;
-        transition: none !important;
-        transform: none !important;
+
+@keyframes luxuryBloom {
+
+    0%,
+    100% {
+
+        opacity: .5;
+
     }
 
-    html {
-        scroll-behavior: auto;
+
+    50% {
+
+        opacity: .8;
+
     }
+
+}
+
+
+
+@keyframes dustFloat {
+
+    from {
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    to {
+
+        transform:
+            translateY(-300px);
+
+    }
+
+}
+
+
+
+@media(max-width:768px) {
+
+    .light-bloom {
+
+        width: 320px;
+        height: 320px;
+
+        right: -80px;
+
+        filter:
+            blur(55px);
+
+    }
+
 }
