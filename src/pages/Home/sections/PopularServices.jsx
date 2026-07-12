@@ -69,9 +69,10 @@ export default function ServicesSection() {
                                 sm:text-5xl
                             "
                         >
-                            Professional Hair & Beauty Services
+                            Hair & Beauty Services
                             <br />
-                            at Nisha Hair Salon
+                            <span className="gradient-text"> at Nisha Hair Salon</span>
+
                         </h2>
 
                         <p
