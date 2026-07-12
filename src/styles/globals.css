@@ -36,7 +36,7 @@
             #d5b48c);
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
 }
 
@@ -93,9 +93,6 @@ img {
     color: #2a1b22;
 }
 
-/* =========================================
-   Reusable Classes — Light Context
-========================================= */
 
 .glass-card {
     background: rgba(255, 255, 255, 0.58);
@@ -129,9 +126,7 @@ img {
     background: var(--primary-gradient);
 }
 
-/* =========================================
-   Dark Context Classes — Hero & Dark Overlays
-========================================= */
+
 
 .glass-card-dark {
     background: rgba(255, 255, 255, 0.08);
@@ -168,9 +163,6 @@ img {
     box-shadow: 0 15px 40px -10px rgba(213, 180, 140, 0.35);
 }
 
-/* =========================================
-   Utility Classes
-========================================= */
 
 .section-padding {
     padding: 6rem 0;
@@ -217,7 +209,7 @@ img {
     mask-composite: exclude;
 }
 
-/* Scrollbar */
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -317,3 +309,5 @@ img {
     animation:
         lightMove 10s ease-in-out infinite;
 }
+
+*/

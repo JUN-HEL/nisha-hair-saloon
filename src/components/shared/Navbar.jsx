@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Sparkles, Scissors } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
     { name: "Home", path: "/" },
@@ -36,8 +35,8 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 z-50 w-full px-3 pt-3 sm:px-5">
             <div
                 className={`mx-auto max-w-7xl rounded-full border transition-all duration-300 ${scrolled
-                        ? "border-white/50 bg-white/75 shadow-[0_18px_50px_rgba(80,50,70,0.12)] backdrop-blur-xl"
-                        : "border-white/40 bg-white/55 backdrop-blur-lg"
+                    ? "border-white/50 bg-white/75 shadow-[0_18px_50px_rgba(80,50,70,0.12)] backdrop-blur-xl"
+                    : "border-white/40 bg-white/55 backdrop-blur-lg"
                     }`}
             >
                 <div className="flex items-center justify-between px-4 py-3 sm:px-6">
@@ -86,46 +85,76 @@ export default function Navbar() {
                         {menuOpen ? <X size={22} /> : <Menu size={22} />}
                     </button>
                 </div>
+                {menuOpen && (
 
-                <AnimatePresence>
-                    {menuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -12 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -12 }}
-                            transition={{ duration: 0.25 }}
-                            className="border-t border-white/50 bg-white/75 px-4 pb-4 pt-2 backdrop-blur-xl md:hidden"
-                        >
-                            <nav className="flex flex-col gap-2">
-                                {navLinks.map((link) => (
-                                    <NavLink
-                                        key={link.path}
-                                        to={link.path}
-                                        onClick={() => setMenuOpen(false)}
-                                        className={({ isActive }) =>
-                                            `rounded-2xl px-4 py-3 text-sm transition ${isActive
-                                                ? "bg-rose-50 font-semibold text-rose-600"
-                                                : "text-zinc-700 hover:bg-white"
-                                            }`
-                                        }
-                                    >
-                                        {link.name}
-                                    </NavLink>
-                                ))}
+                    <div
+                        className="
+            border-t
+            border-white/50
+            bg-white/90
+            px-4
+            pb-4
+            pt-2
+            md:hidden
+        "
+                    >
 
-                                <a
-                                    href="https://wa.me/919999999999"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="mt-2 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 px-5 py-3 text-center text-sm font-semibold text-white"
+                        <nav className="flex flex-col gap-2">
+
+                            {navLinks.map((link) => (
+
+                                <NavLink
+                                    key={link.path}
+                                    to={link.path}
+                                    onClick={() => setMenuOpen(false)}
+                                    className={({ isActive }) =>
+                                        `rounded-2xl px-4 py-3 text-sm transition ${isActive
+                                            ? "bg-rose-50 font-semibold text-rose-600"
+                                            : "text-zinc-700 hover:bg-white"
+                                        }`
+                                    }
                                 >
-                                    Book Now
-                                </a>
-                            </nav>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+
+                                    {link.name}
+
+                                </NavLink>
+
+                            ))}
+
+
+
+                            <a
+                                href="https://wa.me/919999999999"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="
+                    mt-2
+                    rounded-2xl
+                    bg-gradient-to-r
+                    from-rose-500
+                    via-pink-500
+                    to-amber-500
+                    px-5
+                    py-3
+                    text-center
+                    text-sm
+                    font-semibold
+                    text-white
+                "
+                            >
+
+                                Book Now
+
+                            </a>
+
+
+                        </nav>
+
+
+                    </div>
+
+                )}
             </div>
-        </header>
+        </header >
     );
 }

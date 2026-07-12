@@ -7,7 +7,7 @@ const Girls = () => {
     return (
         <section className="section-padding relative overflow-hidden">
 
-            {/* Background Glow */}
+            {/* Background Glow */}gi
             <div
                 className="
                 absolute
