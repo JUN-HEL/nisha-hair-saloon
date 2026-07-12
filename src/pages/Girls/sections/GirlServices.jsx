@@ -1,6 +1,6 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { Sparkles, ArrowRight } from "lucide-react";
-import { GirlsServices as girlsServicesData } from "../../../data/services";
+import { GirlsServices as girlsServicesData } from "../../../data/Services";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";

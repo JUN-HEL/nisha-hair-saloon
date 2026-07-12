@@ -414,7 +414,7 @@ export default function Hero() {
                         <div className="bride-float relative">
 
                             <img
-                                src="/images/bg.webp"
+                                src="/images/bg.png"
                                 alt="Professional bridal makeup and hairstyling by Nisha Hair Salon in Gumkhal, Pauri Garhwal"
                                 width={650}
                                 height={760}

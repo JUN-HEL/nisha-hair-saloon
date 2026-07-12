@@ -1,21 +1,25 @@
+import { useMemo } from "react";
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { GirlsServices } from "../../../data/services";
+import { GirlsServices } from "../../../data/Services";
 
 export default function ServicesSection() {
 
-    const featuredServices = GirlsServices.filter(
-        (service) => service.featured
+    const featuredServices = useMemo(
+        () => GirlsServices.filter((service) => service.featured),
+        []
     );
 
     return (
-        <AnimatedSection className="px-4 py-20 sm:px-6 lg:px-8">
+        <AnimatedSection
+            className="px-4 py-20 sm:px-6 lg:px-8"
+            aria-labelledby="services-heading"
+        >
 
             <div className="container-custom">
 
-
-                <div
+                <section
                     className="
                         rounded-[2rem]
                         border
@@ -28,8 +32,7 @@ export default function ServicesSection() {
                     "
                 >
 
-
-                    {/* Heading */}
+                    {/* ================= Heading ================= */}
 
                     <div className="max-w-2xl">
 
@@ -47,13 +50,16 @@ export default function ServicesSection() {
                                 text-[#7c5569]
                             "
                         >
-                            <Sparkles size={15} />
-                            Premium Services
+                            <Sparkles
+                                size={15}
+                                aria-hidden="true"
+                            />
+
+                            Premium Hair & Beauty Services
                         </p>
 
-
-
                         <h2
+                            id="services-heading"
                             className="
                                 mt-4
                                 text-3xl
@@ -63,12 +69,10 @@ export default function ServicesSection() {
                                 sm:text-5xl
                             "
                         >
-                            Beauty treatments
+                            Professional Hair & Beauty Services
                             <br />
-                            designed for you
+                            at Nisha Hair Salon
                         </h2>
-
-
 
                         <p
                             className="
@@ -77,14 +81,26 @@ export default function ServicesSection() {
                                 text-[#6f6269]
                             "
                         >
-                            Hair, beauty and skincare services crafted with
-                            professional care and luxury products.
+                            Discover professional haircuts, bridal makeup,
+                            hairstyling, facials, hair coloring, skincare,
+                            waxing and beauty treatments at Nisha Hair Salon
+                            in Gumkhal, Pauri Garhwal. Every service is
+                            delivered with premium products, expert care and
+                            attention to detail.
                         </p>
 
+                        {/* Hidden SEO Content */}
 
+                        <p className="sr-only">
+                            Nisha Hair Salon offers professional haircuts,
+                            bridal makeup, facials, hair spa, hair coloring,
+                            waxing, threading, skincare and beauty services
+                            in Gumkhal, Pauri Garhwal, Uttarakhand.
+                        </p>
 
                         <Link
                             to="/services"
+                            aria-label="Explore all hair and beauty services offered by Nisha Hair Salon"
                             className="
                                 mt-6
                                 inline-flex
@@ -106,17 +122,12 @@ export default function ServicesSection() {
                                 hover:shadow-xl
                             "
                         >
-                            View All Services
+                            Explore All Services
                         </Link>
-
 
                     </div>
 
-
-
-
-
-                    {/* Cards */}
+                    {/* ================= Service Cards ================= */}
 
                     <div
                         className="
@@ -127,14 +138,14 @@ export default function ServicesSection() {
                             sm:grid-cols-2
                             lg:grid-cols-4
                         "
-                    >
+                    >                        {featuredServices.map((service, index) => (
 
-                        {featuredServices.map((service, index) => (
-
-                            <div
-                                key={service.id}
-                                className="
+                        <article
+                            key={service.id}
+                            aria-labelledby={`service-title-${service.id}`}
+                            className="
                                     group
+                                    will-change-transform
                                     overflow-hidden
                                     rounded-[1.5rem]
                                     border
@@ -146,24 +157,27 @@ export default function ServicesSection() {
                                     hover:-translate-y-2
                                     hover:shadow-[0_20px_60px_rgba(124,85,105,0.18)]
                                 "
-                            >
+                        >
 
+                            {/* ================= Image ================= */}
 
-                                {/* Image */}
-
-                                <div
-                                    className="
+                            <div
+                                className="
                                         relative
                                         h-32
                                         overflow-hidden
                                         sm:h-40
                                     "
-                                >
+                            >
 
-                                    <img
-                                        src={service.image}
-                                        alt={service.name}
-                                        className="
+                                <img
+                                    src={service.image}
+                                    alt={`${service.name} at Nisha Hair Salon in Gumkhal, Pauri Garhwal`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    width={400}
+                                    height={300}
+                                    className="
                                             h-full
                                             w-full
                                             object-cover
@@ -171,11 +185,11 @@ export default function ServicesSection() {
                                             duration-700
                                             group-hover:scale-110
                                         "
-                                    />
+                                />
 
-
-                                    <div
-                                        className="
+                                <div
+                                    aria-hidden="true"
+                                    className="
                                             absolute
                                             inset-0
                                             bg-gradient-to-t
@@ -183,13 +197,13 @@ export default function ServicesSection() {
                                             via-transparent
                                             to-transparent
                                         "
-                                    />
+                                />
 
+                                {service.popular && (
 
-                                    {service.popular && (
-
-                                        <span
-                                            className="
+                                    <span
+                                        aria-label="Popular service"
+                                        className="
                                                 absolute
                                                 left-3
                                                 top-3
@@ -201,50 +215,42 @@ export default function ServicesSection() {
                                                 font-semibold
                                                 text-[#7c5569]
                                             "
-                                        >
-                                            Popular
-                                        </span>
+                                    >
+                                        Popular
+                                    </span>
 
-                                    )}
+                                )}
 
-                                </div>
+                            </div>
 
+                            {/* ================= Content ================= */}
 
+                            <div className="p-4 sm:p-5">
 
-
-
-                                {/* Content */}
-
-                                <div className="p-4 sm:p-5">
-
-
-                                    <p
-                                        className="
+                                <p
+                                    className="
                                             text-xs
                                             text-[#b58fa2]
                                         "
-                                    >
-                                        0{index + 1}
-                                    </p>
+                                >
+                                    {String(index + 1).padStart(2, "0")}
+                                </p>
 
-
-
-                                    <h3
-                                        className="
+                                <h3
+                                    id={`service-title-${service.id}`}
+                                    className="
                                             mt-2
                                             text-base
                                             font-semibold
                                             text-[#22181d]
                                             sm:text-lg
                                         "
-                                    >
-                                        {service.name}
-                                    </h3>
+                                >
+                                    {service.name}
+                                </h3>
 
-
-
-                                    <p
-                                        className="
+                                <p
+                                    className="
                                             mt-2
                                             line-clamp-2
                                             text-xs
@@ -252,48 +258,46 @@ export default function ServicesSection() {
                                             text-[#6f6269]
                                             sm:text-sm
                                         "
-                                    >
-                                        {service.description}
-                                    </p>
+                                >
+                                    {service.description}
+                                </p>                                    {/* ================= Price & Duration ================= */}
 
-
-
-
-                                    <div
-                                        className="
+                                <div
+                                    className="
                                             mt-4
                                             flex
                                             items-center
                                             justify-between
                                         "
-                                    >
+                                >
 
-                                        <span
-                                            className="
+                                    <span
+                                        aria-label={`Starting price ₹${service.price}`}
+                                        className="
                                                 font-bold
                                                 text-[#7c5569]
                                             "
-                                        >
-                                            ₹{service.price}
-                                        </span>
+                                    >
+                                        ₹{service.price}
+                                    </span>
 
-
-                                        <span
-                                            className="
+                                    <span
+                                        aria-label={`Estimated duration ${service.duration}`}
+                                        className="
                                                 text-xs
                                                 text-[#6f6269]
                                             "
-                                        >
-                                            {service.duration}
-                                        </span>
+                                    >
+                                        {service.duration}
+                                    </span>
 
+                                </div>
 
-                                    </div>
+                                {/* Decorative Divider */}
 
-
-
-                                    <div
-                                        className="
+                                <div
+                                    aria-hidden="true"
+                                    className="
                                             mt-4
                                             h-[2px]
                                             w-12
@@ -306,25 +310,21 @@ export default function ServicesSection() {
                                             duration-500
                                             group-hover:w-full
                                         "
-                                    />
-
-                                </div>
-
+                                />
 
                             </div>
 
-                        ))}
+                        </article>
 
+                    ))}
 
                     </div>
 
-
-                </div>
-
+                </section>
 
             </div>
 
-
         </AnimatedSection>
+
     );
 }
