@@ -1,6 +1,6 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { Sparkles } from "lucide-react";
-import { BoysServices as boysServicesData } from "../../../data/services";
+import { BoysServices as boysServicesData } from "../../../data/Services";
 
 
 export default function BoysGallery() {
