@@ -6,10 +6,15 @@ import WhyChooseUs from "./sections/WhyChooseUs";
 import GalleryPreview from "./sections/GalleryPreview";
 import LocationPreview from "./sections/LocationPreview";
 import FinalCTA from "./sections/FinalCTA";
+import SEO from "../../components/SEO/SEO";
 
 export default function HomePage() {
     return (
-        <>
+        <><SEO
+            title="Nisha Hair Salon | Best Hair Salon & Beauty Parlour in Gumkhal"
+            description="Nisha Hair Salon in Gumkhal offers haircuts, hairstyling, bridal makeup, facials, hair spa, hair coloring, keratin treatment, men's grooming, jewellery rental and lehenga rental."
+            canonical="https://nisha-hair-salon.netlify.app/"
+        />
             <Hero />
             <PopularServices />
             <AudienceSplit />

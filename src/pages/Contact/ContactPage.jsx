@@ -6,6 +6,7 @@ import {
     MessageCircle,
     Instagram
 } from "lucide-react";
+import SEO from "../../components/SEO/SEO";
 
 
 export default function ContactPage() {
@@ -28,6 +29,11 @@ export default function ContactPage() {
             "
         >
 
+            <SEO
+                title="Contact Nisha Hair Salon | Book an Appointment"
+                description="Contact Nisha Hair Salon in Gumkhal to book appointments for haircuts, bridal makeup, facials, beauty services, jewellery rental and lehenga rental."
+                canonical="https://nisha-hair-salon.netlify.app/contact"
+            />
             {/* Ambient Background */}
 
             <div

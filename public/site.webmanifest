@@ -1,0 +1,37 @@
+{
+    "name": "Nisha Hair Salon",
+    "short_name": "Nisha Salon",
+    "description": "Hair Salon, Beauty Parlour, Bridal Makeup, Hair Spa, Men's Grooming, Jewellery Rental & Lehenga Rental in Gumkhal, Pauri Garhwal.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#fffaf6",
+    "theme_color": "#7c5569",
+    "lang": "en-IN",
+    "categories": [
+        "beauty",
+        "lifestyle",
+        "business"
+    ],
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/maskable-icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
