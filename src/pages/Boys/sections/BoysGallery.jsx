@@ -1,12 +1,12 @@
 import AnimatedSection from "../../../components/common/AnimatedSection";
 import { Sparkles } from "lucide-react";
-import { BoysServices as boysServicesData } from "../../../data/Services";
+import { BoysServices } from "../../../data/Services";
 
 
 export default function BoysGallery() {
 
 
-    const galleryImages = boysServicesData
+    const galleryImages = BoysServices
         .filter((service) => service.image)
         .slice(0, 4);
 
@@ -27,9 +27,12 @@ export default function BoysGallery() {
                     rounded-[2rem]
                     border
                     border-white/10
-                    bg-[#080808]
-                    p-5
-                    shadow-[0_20px_60px_rgba(0,0,0,.6)]
+                    bg-gradient-to-br
+                    from-[#080808]
+                    via-[#171214]
+                    to-[#2b2025]
+                    p-6
+                    shadow-[0_20px_70px_rgba(0,0,0,.55)]
                     sm:p-10
                     lg:p-12
                 "
@@ -38,21 +41,20 @@ export default function BoysGallery() {
 
 
 
-                {/* HEADER */}
 
+                {/* HEADER */}
 
                 <div className="max-w-2xl">
 
 
                     <div
-
                         className="
                             inline-flex
                             items-center
                             gap-2
                             rounded-full
                             border
-                            border-white/10
+                            border-[#d4af37]/30
                             bg-white/5
                             px-4
                             py-2
@@ -60,21 +62,18 @@ export default function BoysGallery() {
                             font-semibold
                             text-[#d4af37]
                         "
-
                     >
 
                         <Sparkles size={15} />
 
-                        Style Gallery
+                        Men's Style Gallery
 
                     </div>
 
 
 
 
-
                     <h2
-
                         className="
                             mt-5
                             text-3xl
@@ -82,10 +81,9 @@ export default function BoysGallery() {
                             text-white
                             sm:text-5xl
                         "
-
                     >
 
-                        Fresh Cuts.
+                        Sharp Cuts.
                         <br />
 
                         <span
@@ -98,29 +96,26 @@ export default function BoysGallery() {
                                 text-transparent
                             "
                         >
-                            Premium Men's Style.
+                            Modern Grooming.
                         </span>
-
 
                     </h2>
 
 
 
 
-
                     <p
-
                         className="
                             mt-4
                             leading-7
                             text-white/60
                         "
-
                     >
 
-                        Explore our latest men's haircut styles,
-                        beard designs, fades and modern grooming
-                        transformations created by professional barbers.
+                        Discover premium men's haircuts,
+                        beard styling, fades and modern
+                        grooming transformations crafted
+                        by professional stylists.
 
                     </p>
 
@@ -132,22 +127,18 @@ export default function BoysGallery() {
 
 
 
-
                 {/* GALLERY */}
 
 
                 <div
-
                     className="
                         mt-10
                         grid
                         grid-cols-2
-                        gap-4
-                        sm:gap-5
+                        gap-5
                         md:grid-cols-4
-                        md:auto-rows-[220px]
+                        md:auto-rows-[230px]
                     "
-
                 >
 
 
@@ -164,15 +155,19 @@ export default function BoysGallery() {
                                 group
                                 relative
                                 overflow-hidden
-                                rounded-3xl
+                                rounded-[2.5rem]
                                 border
                                 border-white/10
-                                bg-white/5
+                                bg-gradient-to-br
+                                from-[#171214]
+                                via-[#241c20]
+                                to-[#0b0b0b]
+                                p-2
+                                shadow-[0_15px_40px_rgba(0,0,0,.4)]
+                                transition
+                                duration-500
+                                hover:-translate-y-2
 
-                                h-44
-                                sm:h-56
-
-                                md:h-auto
 
                                 ${index === 0
                                     ? "md:col-span-2 md:row-span-2"
@@ -190,75 +185,75 @@ export default function BoysGallery() {
 
 
 
-                            <img
-
-                                src={service.image}
-
-                                alt={`${service.name} men's hairstyle gallery`}
-
-                                loading="lazy"
-
-                                decoding="async"
-
+                            <div
                                 className="
-
+                                    flex
                                     h-full
-                                    w-full
-                                    object-cover
-
-                                    transition
-                                    duration-700
-
-                                    group-hover:scale-110
-
+                                    items-center
+                                    justify-center
+                                    overflow-hidden
+                                    rounded-[2rem]
+                                    bg-black
                                 "
+                            >
 
-                            />
+                                <img
+
+                                    src={service.image}
+
+                                    alt={`${service.name} men's hairstyle gallery`}
+
+                                    loading="lazy"
+
+                                    decoding="async"
+
+                                    className="
+                                        h-full
+                                        w-full
+                                        object-contain
+                                        transition
+                                        duration-700
+                                        group-hover:scale-105
+                                    "
+
+                                />
+
+                            </div>
 
 
 
 
 
-
-
-                            {/* OVERLAY */}
+                            {/* TEXT OVERLAY */}
 
 
                             <div
-
                                 className="
-
                                     absolute
-                                    inset-x-0
-                                    bottom-0
-
+                                    inset-x-2
+                                    bottom-2
+                                    rounded-b-[2rem]
                                     bg-gradient-to-t
                                     from-black
-                                    via-black/60
+                                    via-black/70
                                     to-transparent
-
-                                    p-4
+                                    p-5
                                     opacity-100
-
                                     md:opacity-0
                                     md:transition
-                                    md:duration-300
+                                    md:duration-500
                                     md:group-hover:opacity-100
-
                                 "
-
                             >
 
 
                                 <h3
-
                                     className="
                                         text-sm
                                         font-bold
                                         text-white
                                         sm:text-lg
                                     "
-
                                 >
 
                                     {service.name}
@@ -267,17 +262,14 @@ export default function BoysGallery() {
 
 
 
-
                                 <p
-
                                     className="
-                                        mt-1
+                                        mt-2
                                         hidden
                                         text-sm
                                         text-white/60
                                         sm:block
                                     "
-
                                 >
 
                                     {service.description}

@@ -21,7 +21,7 @@ export default function GalleryCTA() {
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <a
-                            href="https://wa.me/919999999999"
+                            href="https://wa.me/917310944581"
                             target="_blank"
                             rel="noreferrer"
                             className="rounded-full bg-white px-6 py-3 font-semibold text-zinc-900 transition hover:scale-[1.03]"

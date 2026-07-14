@@ -378,7 +378,7 @@ export default function GirlsServices() {
                         line-clamp-1
                         text-sm
                         font-bold
-                        text-white
+                        text-black
                         sm:text-lg
                         "
 
@@ -400,7 +400,7 @@ export default function GirlsServices() {
                         line-clamp-2
                         text-xs
                         leading-5
-                        text-white/50
+                        text-black/50
                         sm:text-sm
                         "
 

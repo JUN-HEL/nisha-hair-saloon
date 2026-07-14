@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "../../../components/common/AnimatedSection";
-import { GirlsServices } from "../../../data/Services";
+import { MenGallery, WomenGallery } from "../../../data/galleryData";
 
 
 export default function GalleryPreview() {
 
-    const galleryImages = GirlsServices.slice(0, 4);
+
+    const galleryImages = [
+
+        // Women priority
+        ...WomenGallery.slice(0, 3),
+
+        // Men after women
+        ...MenGallery.slice(0, 2),
+
+    ];
+
 
 
     return (
+
         <AnimatedSection className="px-4 py-20 sm:px-6 lg:px-8">
+
 
             <div className="container-custom">
 
@@ -21,14 +33,15 @@ export default function GalleryPreview() {
                         border-white/60
                         bg-white/50
                         p-6
-                        sm:p-10
-                        backdrop-blur-xl
                         shadow-[0_20px_60px_rgba(124,85,105,0.12)]
+                        backdrop-blur-xl
+                        sm:p-10
                     "
                 >
 
 
-                    {/* Heading */}
+
+                    {/* HEADER */}
 
                     <div
                         className="
@@ -41,7 +54,9 @@ export default function GalleryPreview() {
                         "
                     >
 
+
                         <div className="max-w-2xl">
+
 
                             <p
                                 className="
@@ -52,8 +67,10 @@ export default function GalleryPreview() {
                                     text-[#7c5569]
                                 "
                             >
-                                Gallery Preview
+                                Salon Gallery
                             </p>
+
+
 
 
                             <h2
@@ -66,10 +83,16 @@ export default function GalleryPreview() {
                                     sm:text-5xl
                                 "
                             >
-                                A dreamy visual showcase
+
+                                Beauty.
                                 <br />
-                                of our work
+                                Style.
+                                <br />
+                                Confidence.
+
                             </h2>
+
+
 
 
                             <p
@@ -79,11 +102,17 @@ export default function GalleryPreview() {
                                     text-[#6f6269]
                                 "
                             >
-                                Explore our latest beauty, hair and grooming
-                                transformations curated with care.
+
+                                Explore our premium bridal makeup,
+                                women's beauty treatments, men's grooming
+                                and modern hairstyle transformations.
+
                             </p>
 
+
                         </div>
+
+
 
 
 
@@ -108,7 +137,9 @@ export default function GalleryPreview() {
                                 hover:-translate-y-1
                             "
                         >
+
                             View Full Gallery
+
                         </Link>
 
 
@@ -118,56 +149,151 @@ export default function GalleryPreview() {
 
 
 
-                    {/* Gallery Grid */}
+
+
+
+                    {/* GALLERY */}
 
                     <div
                         className="
                             mt-10
-                            grid
-                            grid-cols-2
-                            gap-4
-                            sm:auto-rows-[220px]
-                            lg:grid-cols-4
+                            rounded-[2rem]
+                            bg-gradient-to-br
+                            from-[#f7ede8]
+                            via-[#fdf8f5]
+                            to-[#ead7c5]
+                            p-4
+                            shadow-inner
+                            sm:p-6
                         "
                     >
 
 
-                        {galleryImages.map((item, index) => (
 
-                            <div
-                                key={item.id}
-                                className={`
-                                    group
-                                    overflow-hidden
-                                    rounded-[1.75rem]
-                                    border
-                                    border-white/60
-                                    ${index === 0
-                                        ? "sm:col-span-2 sm:row-span-2"
-                                        : index === 3
-                                            ? "sm:col-span-2"
+                        <div
+                            className="
+                                grid
+                                grid-cols-2
+                                gap-4
+                                lg:grid-cols-4
+                            "
+                        >
+
+
+
+                            {galleryImages.map((item, index) => (
+
+
+                                <div
+                                    key={`${item.id}-${index}`}
+                                    className={`
+                                        group
+                                        relative
+                                        flex
+                                        items-center
+                                        justify-center
+                                        overflow-hidden
+                                        rounded-[1.75rem]
+                                        border
+                                        border-white/70
+                                        bg-gradient-to-br
+                                        from-white
+                                        via-[#faf1ed]
+                                        to-[#e8d1c2]
+                                        shadow-[0_15px_40px_rgba(124,85,105,0.12)]
+
+                                        ${index === 0
+                                            ? "lg:col-span-2 lg:row-span-2"
                                             : ""
-                                    }
-                                `}
-                            >
+                                        }
+                                    `}
+                                >
 
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="
-                                        h-full
-                                        min-h-52
-                                        w-full
-                                        object-cover
-                                        transition
-                                        duration-700
-                                        group-hover:scale-110
-                                    "
-                                />
 
-                            </div>
 
-                        ))}
+                                    {/* Decorative Glow */}
+
+                                    <div
+                                        className="
+                                            absolute
+                                            -right-10
+                                            -top-10
+                                            h-32
+                                            w-32
+                                            rounded-full
+                                            bg-[#d5b48c]/30
+                                            blur-3xl
+                                        "
+                                    />
+
+
+                                    <div
+                                        className="
+                                            absolute
+                                            -bottom-10
+                                            -left-10
+                                            h-32
+                                            w-32
+                                            rounded-full
+                                            bg-[#b58fa2]/20
+                                            blur-3xl
+                                        "
+                                    />
+
+
+
+
+
+                                    <img
+                                        src={item.image}
+                                        alt={item.alt}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="
+                                            relative
+                                            z-10
+                                            h-full
+                                            min-h-52
+                                            w-full
+                                            object-contain
+                                            p-3
+                                            transition
+                                            duration-700
+                                            group-hover:scale-105
+                                        "
+                                    />
+
+
+
+
+
+                                    {/* Hover Overlay */}
+
+                                    <div
+                                        className="
+                                            absolute
+                                            inset-0
+                                            z-20
+                                            bg-gradient-to-t
+                                            from-[#7c5569]/20
+                                            via-transparent
+                                            opacity-0
+                                            transition
+                                            duration-500
+                                            group-hover:opacity-100
+                                        "
+                                    />
+
+
+
+                                </div>
+
+
+                            ))}
+
+
+
+                        </div>
 
 
                     </div>
@@ -180,5 +306,7 @@ export default function GalleryPreview() {
 
 
         </AnimatedSection>
+
     );
+
 }

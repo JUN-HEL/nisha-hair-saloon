@@ -9,64 +9,68 @@ const Boys = () => {
     return (
         <section
             className="
-            relative
-            overflow-hidden
-            bg-[#171318]
-            text-white
-            section-padding
+                relative
+                overflow-hidden
+                bg-[#171318]
+                text-white
+                section-padding
             "
         >
 
             {/* Dark Glow */}
-            <div
-                className="
-                absolute
-                -top-20
-                right-0
-                h-96
-                w-96
-                rounded-full
-                bg-[#d5b48c]/20
-                blur-3xl
-                "
-            />
 
             <div
                 className="
-                absolute
-                bottom-0
-                left-0
-                h-80
-                w-80
-                rounded-full
-                bg-[#7c5569]/20
-                blur-3xl
+                    absolute
+                    -top-20
+                    right-0
+                    h-96
+                    w-96
+                    rounded-full
+                    bg-[#d5b48c]/20
+                    blur-3xl
                 "
             />
+
+
+            <div
+                className="
+                    absolute
+                    bottom-0
+                    left-0
+                    h-80
+                    w-80
+                    rounded-full
+                    bg-[#7c5569]/20
+                    blur-3xl
+                "
+            />
+
 
 
             {/* Hero */}
+
             <div className="container-custom relative">
 
 
                 <div
                     className="
-                    glass-card-dark
-                    rounded-[2.5rem]
-                    p-8
-                    md:p-12
+                        glass-card-dark
+                        rounded-[2.5rem]
+                        p-8
+                        md:p-12
                     "
                 >
 
-                    <div className="max-w-xl">
 
+                    <div className="max-w-xl">
 
                         <p
                             className="
-                            text-sm
-                            uppercase
-                            tracking-[0.3em]
-                            text-[#d5b48c]
+                                text-sm
+                                uppercase
+                                tracking-[0.3em]
+                                text-[#d5b48c]
                             "
                         >
                             Men's Grooming
@@ -75,9 +79,9 @@ const Boys = () => {
 
                         <h1
                             className="
-                            heading-xl
-                            mt-4
-                            text-white
+                                heading-xl
+                                mt-4
+                                text-white
                             "
                         >
                             Sharp style.
@@ -92,10 +96,10 @@ const Boys = () => {
 
                         <p
                             className="
-                            mt-5
-                            leading-relaxed
-                            text-white/60
-                            max-w-md
+                                mt-5
+                                max-w-md
+                                leading-relaxed
+                                text-white/60
                             "
                         >
                             Premium haircuts, beard styling and grooming
@@ -105,15 +109,15 @@ const Boys = () => {
 
                         <button
                             className="
-                            mt-8
-                            gradient-bg-dark
-                            rounded-full
-                            px-8
-                            py-3
-                            text-white
-                            shadow-hero-dark
-                            transition
-                            hover:scale-105
+                                mt-8
+                                rounded-full
+                                gradient-bg-dark
+                                px-8
+                                py-3
+                                text-white
+                                shadow-hero-dark
+                                transition
+                                hover:scale-105
                             "
                         >
                             Explore Services
@@ -124,22 +128,28 @@ const Boys = () => {
 
 
 
+
+
                     {/* Featured Cards */}
 
                     <div
                         className="
-                        mt-12
-                        grid
-                        gap-6
-                        md:grid-cols-3
+                            mt-12
+                            grid
+                            grid-cols-2
+                            gap-3
+                            sm:gap-6
+                            lg:grid-cols-3
                         "
                     >
 
                         {featured.slice(0, 3).map(service => (
+
                             <Card
                                 key={service.id}
                                 data={service}
                             />
+
                         ))}
 
                     </div>
@@ -151,27 +161,31 @@ const Boys = () => {
 
 
 
+
+
             {/* All Services */}
+
 
             <div className="container-custom relative mt-20">
 
 
                 <p
                     className="
-                    text-sm
-                    uppercase
-                    tracking-[0.3em]
-                    text-[#b58fa2]
+                        text-sm
+                        uppercase
+                        tracking-[0.3em]
+                        text-[#b58fa2]
                     "
                 >
                     Grooming Collection
                 </p>
 
 
+
                 <h2
                     className="
-                    heading-lg
-                    mt-3
+                        heading-lg
+                        mt-3
                     "
                 >
                     Fresh cuts.
@@ -185,17 +199,20 @@ const Boys = () => {
 
 
 
+
                 <div
                     className="
-                    mt-10
-                    grid
-                    gap-7
-                    sm:grid-cols-2
-                    lg:grid-cols-3
+                        mt-10
+                        grid
+                        grid-cols-2
+                        gap-3
+                        sm:gap-6
+                        lg:grid-cols-3
                     "
                 >
 
                     {BoysServices.map(service => (
+
                         <Card
                             key={service.id}
                             data={{
@@ -207,7 +224,9 @@ const Boys = () => {
                                         .replace("Men's ", "")
                             }}
                         />
+
                     ))}
+
 
                 </div>
 
@@ -218,5 +237,6 @@ const Boys = () => {
         </section>
     );
 };
+
 
 export default Boys;
