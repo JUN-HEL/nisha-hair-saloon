@@ -1,17 +1,4 @@
-<url>
-    <loc>https://nisha-hair-salon.netlify.app/privacy-policy</loc>
-    <priority>0.3</priority>
-    <changefreq>yearly</changefreq>
-</url>
+User-agent: *
+Allow: /
 
-<url>
-    <loc>https://nisha-hair-salon.netlify.app/terms-and-conditions</loc>
-    <priority>0.3</priority>
-    <changefreq>yearly</changefreq>
-</url>
-
-<url>
-    <loc>https://nisha-hair-salon.netlify.app/404</loc>
-    <priority>0.1</priority>
-    <changefreq>never</changefreq>
-</url>
+Sitemap: https://nisha-hair-salon.netlify.app/sitemap.xml
