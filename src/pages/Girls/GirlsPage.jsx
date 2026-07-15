@@ -18,7 +18,7 @@ export default function GirlsPage() {
             <GirlsHero />
             <GirlServices />
             <BridalHighlight />
-            <GirlsReels />
+            {/* <GirlsReels /> */}
             <GirlsGallery />
             <GirlsCTA />
         </>

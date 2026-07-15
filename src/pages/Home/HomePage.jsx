@@ -18,7 +18,7 @@ export default function HomePage() {
             <Hero />
             <PopularServices />
             <AudienceSplit />
-            <ReelsPreview />
+            {/* <ReelsPreview /> */}
             <WhyChooseUs />
             <GalleryPreview />
             <LocationPreview />

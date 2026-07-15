@@ -16,7 +16,7 @@ export default function BoysPage() {
             />
             <BoysHero />
             <BoysServices />
-            <BoysReels />
+            {/* <BoysReels /> */}
             <BoysGallery />
             <BoysCTA />
         </>
