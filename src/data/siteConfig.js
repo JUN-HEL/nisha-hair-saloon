@@ -3,12 +3,12 @@ export const siteConfig = {
   locationShort: "Gumkhal, Pauri Garhwal, Uttarakhand",
 
   phone: {
-    primary: "+91731094457",
+    primary: "+917310944581",
     secondary: "+919027458896",
   },
 
   // WhatsApp number (without +)
-  whatsapp: "91731094457",
+  whatsapp: "917310944581",
 
   maps: "https://maps.app.goo.gl/NSrFGAdKX3tQn4XH7",
 
