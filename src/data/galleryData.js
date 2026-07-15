@@ -73,7 +73,7 @@ export const MenGallery = [
     id: 7,
     title: "Taper Fade Haircut",
     category: "Fade Haircuts",
-    image: "/images/gallery/mens/mens-hair-tapar-fade.webp",
+    image: "/images/gallery/mens/mens-hair-taper-fade.webp",
     alt: "Professional taper fade haircut",
     description:
       "Stylish taper fade haircut with clean finishing and modern barber techniques.",
@@ -95,7 +95,7 @@ export const MenGallery = [
     id: 9,
     title: "High Fade Haircut",
     category: "Fade Haircuts",
-    image: "/images/gallery/mens/mens-hair-high-fade.jpg.webp",
+    image: "/images/gallery/mens/mens-hair-high-fade.webp",
     alt: "High fade haircut for men",
     description:
       "Sharp high fade haircut with premium barber finishing.",
