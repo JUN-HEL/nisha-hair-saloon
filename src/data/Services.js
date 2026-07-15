@@ -116,7 +116,7 @@ export const GirlsServices = [
     },
 
 
-    {
+  /*   {
         id: 7,
         category: "facial",
         name: "Hydra Facial",
@@ -133,7 +133,7 @@ export const GirlsServices = [
             "Massage",
             "Hydration"
         ]
-    },
+    }, */
 
 
     {

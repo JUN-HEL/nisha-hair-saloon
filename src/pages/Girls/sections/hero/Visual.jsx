@@ -87,7 +87,7 @@ export default function Visual({
 
                 <img
 
-                    src="/images/services/p4.jpg"
+                    src="/images/services/girls/bridal-makeup-b.webp"
 
                     alt="Girls fashion"
 
@@ -96,6 +96,7 @@ export default function Visual({
                     w-full
                     rounded-[2.5rem]
                     object-cover
+
                     "
 
                 />
@@ -110,12 +111,13 @@ export default function Visual({
 
             <Card
 
-                image="/images/services/hair-cut.jpg"
+                image="/images/services/girls/hair-cut.webp"
 
                 className="
                 left-0
                 top-20
                 rotate-[-5deg]
+            
                 "
 
             />
@@ -124,12 +126,13 @@ export default function Visual({
 
             <Card
 
-                image="/images/services/hair-smoothing.jpg"
+                image="/images/services/girls/hair-colour.webp"
 
                 className="
                 bottom-14
                 right-0
                 rotate-[5deg]
+                z-30
                 "
 
             />

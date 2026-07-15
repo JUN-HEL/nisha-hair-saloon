@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 
-export default function BoysServices() {
+export default function Boys() {
 
     const featuredServices = boysServicesData.filter(
         (service) => service.featured
@@ -17,7 +17,6 @@ export default function BoysServices() {
 
 
     return (
-
         <AnimatedSection className="px-4 py-16 sm:px-6 lg:px-8">
 
             <section
@@ -44,7 +43,6 @@ export default function BoysServices() {
                     "
                 >
 
-
                     {/* CONTENT */}
 
                     <div>
@@ -65,13 +63,9 @@ export default function BoysServices() {
                                 text-[#d4af37]
                             "
                         >
-
                             <Sparkles size={15} />
-
                             Men's Grooming
-
                         </div>
-
 
 
                         <h2
@@ -84,17 +78,12 @@ export default function BoysServices() {
                                 sm:text-5xl
                             "
                         >
-
                             Premium Haircuts
                             <br />
-
                             Beard Styling &
                             <br />
-
                             Modern Grooming
-
                         </h2>
-
 
 
                         <p
@@ -106,14 +95,10 @@ export default function BoysServices() {
                                 sm:text-base
                             "
                         >
-
-                            Professional barber services including
-                            stylish haircuts, beard shaping and complete
-                            grooming treatments for modern men.
-
+                            Professional barber services including stylish
+                            haircuts, beard shaping and complete grooming
+                            treatments for modern men.
                         </p>
-
-
 
 
                         <div className="mt-7 space-y-3">
@@ -127,12 +112,7 @@ export default function BoysServices() {
 
                                 <div
                                     key={item}
-                                    className="
-                                        flex
-                                        items-center
-                                        gap-3
-                                        text-white/80
-                                    "
+                                    className="flex items-center gap-3 text-white/80"
                                 >
 
                                     <span
@@ -161,8 +141,6 @@ export default function BoysServices() {
                         </div>
 
 
-
-
                         <a
                             href="/services"
                             className="
@@ -181,11 +159,8 @@ export default function BoysServices() {
                                 text-black
                             "
                         >
-
                             Explore Services
-
                             <ArrowRight size={17} />
-
                         </a>
 
 
@@ -193,20 +168,11 @@ export default function BoysServices() {
 
 
 
+                    {/* SERVICE SLIDER */}
 
-
-                    {/* CARDS */}
-
-                    <div
-                        className="
-                            w-full
-                            max-w-full
-                            overflow-hidden
-                        "
-                    >
+                    <div className="w-full overflow-hidden">
 
                         <Swiper
-
                             className="services-swiper"
 
                             modules={[
@@ -223,14 +189,11 @@ export default function BoysServices() {
                                 clickable: true
                             }}
 
-
                             slidesPerView={2}
 
                             spaceBetween={10}
 
-
                             breakpoints={{
-
                                 640: {
                                     slidesPerView: 2,
                                     spaceBetween: 16
@@ -240,21 +203,15 @@ export default function BoysServices() {
                                     slidesPerView: 2,
                                     spaceBetween: 20
                                 }
-
                             }}
-
                         >
 
-
-
                             {featuredServices.map((service) => (
-
 
                                 <SwiperSlide
                                     key={service.id}
                                     className="!h-auto"
                                 >
-
 
                                     <article
                                         className="
@@ -267,7 +224,6 @@ export default function BoysServices() {
                                         "
                                     >
 
-
                                         <div
                                             className="
                                                 h-28
@@ -277,34 +233,20 @@ export default function BoysServices() {
                                         >
 
                                             <img
-
                                                 src={service.image}
-
                                                 alt={`${service.name} men's grooming service`}
-
                                                 loading="lazy"
-
                                                 className="
                                                     h-full
                                                     w-full
                                                     object-cover
                                                 "
-
                                             />
 
                                         </div>
 
 
-
-
-
-                                        <div
-                                            className="
-                                                p-3
-                                                sm:p-5
-                                            "
-                                        >
-
+                                        <div className="p-3 sm:p-5">
 
                                             <h3
                                                 className="
@@ -315,65 +257,42 @@ export default function BoysServices() {
                                                     sm:text-lg
                                                 "
                                             >
-
                                                 {service.name}
-
                                             </h3>
 
 
-
-
-                                            <div
+                                            <span
                                                 className="
                                                     mt-3
-                                                    flex
-                                                    items-center
-                                                    justify-between
+                                                    block
+                                                    text-sm
+                                                    font-black
+                                                    text-[#d4af37]
+                                                    sm:text-xl
                                                 "
                                             >
-
-                                                <span
-                                                    className="
-                                                        text-sm
-                                                        font-black
-                                                        text-[#d4af37]
-                                                        sm:text-xl
-                                                    "
-                                                >
-
-                                                    ₹{service.price}
-
-                                                </span>
-
-
-                                            </div>
-
+                                                ₹{service.price}
+                                            </span>
 
                                         </div>
 
 
                                     </article>
 
-
                                 </SwiperSlide>
-
 
                             ))}
 
 
                         </Swiper>
 
-
                     </div>
 
 
                 </div>
 
-
             </section>
 
-
         </AnimatedSection>
-
     );
 }

@@ -1,10 +1,18 @@
 export const siteConfig = {
   name: "Nisha Hair Salon",
-  locationShort: "gumkhal, pauri garhwal, uttrakhand",
-  phone: "+91731094457",
-  whatsapp: "917310944581",
+  locationShort: "Gumkhal, Pauri Garhwal, Uttarakhand",
+
+  phone: {
+    primary: "+91731094457",
+    secondary: "+919027458896",
+  },
+
+  // WhatsApp number (without +)
+  whatsapp: "91731094457",
+
   maps: "https://maps.app.goo.gl/NSrFGAdKX3tQn4XH7",
-  instagram: "https://www.instagram.com/the_styling_nawed",
-  address:
-    "Gumkhal, Pauri Garhwal, Uttrakhand",
+
+  instagram: "https://www.instagram.com/nishabeauty_parlour__1/",
+
+  address: "Gumkhal, Pauri Garhwal, Uttarakhand",
 };

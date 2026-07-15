@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import MainLayout from "../layouts/MainLayout";
 
+// Pages
 import HomePage from "../pages/Home/HomePage";
 import BoysPage from "../pages/Boys/BoysPage";
 import GirlsPage from "../pages/Girls/GirlsPage";
@@ -9,23 +11,74 @@ import GalleryPage from "../pages/Gallery/GalleryPage";
 import AboutPage from "../pages/About/AboutPage";
 import ContactPage from "../pages/Contact/ContactPage";
 
+// Service Sections
+import Boys from "../pages/Services/sections/Boys";
+import Girls from "../pages/Services/sections/Girls";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+
     children: [
-      { index: true, element: <HomePage /> },
 
-      { path: "boys", element: <BoysPage /> },
-      { path: "girls", element: <GirlsPage /> },
+      {
+        index: true,
+        element: <HomePage />,
+      },
 
-      { path: "services", element: <Services /> },
 
-      { path: "gallery", element: <GalleryPage /> },
-      { path: "about", element: <AboutPage /> },
-      { path: "contact", element: <ContactPage /> },
+      {
+        path: "boys",
+        element: <BoysPage />,
+      },
+
+
+      {
+        path: "girls",
+        element: <GirlsPage />,
+      },
+
+
+      // Services
+      {
+        path: "services",
+        element: <Services />,
+      },
+
+      {
+        path: "services/boys",
+        element: <Boys />,
+      },
+
+      {
+        path: "services/girls",
+        element: <Girls />,
+      },
+
+
+      // Gallery
+      {
+        path: "gallery",
+        element: <GalleryPage />,
+      },
+
+
+      // Other Pages
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+
     ],
   },
 ]);
+
 
 export default router;

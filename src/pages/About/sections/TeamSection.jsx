@@ -11,7 +11,7 @@ const team = [
     {
         name: "Mr. Dilshad Khan",
         role: "Founder | Makeup Specialist & Hair Specialist",
-        image: "/images/team/dilshad-khan.jpg",
+        image: "/images/team/MrDilshadKhan.jpg",
         description:
             "Founder of Nisha Hair Salon, Gumkhal, Pauri Garhwal. Specializing in bridal makeup, professional makeup looks, hair styling, and beauty transformations with years of experience.",
         instagram:
@@ -23,7 +23,7 @@ const team = [
     {
         name: "Mr. Nawed",
         role: "Men's Hair Specialist",
-        image: "/images/team/nawed.jpg",
+        image: "/images/team/tampu1.jpg",
         description:
             "Expert men's hair specialist at Nisha Hair Salon, Gumkhal. Creating modern haircuts, stylish looks, beard grooming, and professional men's hairstyles.",
         instagram:
