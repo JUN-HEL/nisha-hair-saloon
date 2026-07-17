@@ -70,7 +70,7 @@ export default function LocationPreview() {
                 {/* Google Map */}
                 <div className="overflow-hidden rounded-[2rem] border border-white/60 shadow-[0_20px_60px_rgba(70,40,60,0.12)]">
                     <iframe
-                        title="Nisha Hair Salon Location"
+                        title="Nisha Hair Salon & Beauty Parlour Location"
                         src="https://www.google.com/maps?q=Gumkhal+Market+Pauri+Garhwal&output=embed"
                         className="h-[430px] w-full"
                         loading="lazy"

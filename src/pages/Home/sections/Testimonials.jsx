@@ -72,7 +72,7 @@ export default function Testimonials() {
                     <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6f6269]">
                         Discover why clients trust{" "}
                         <span className="font-semibold text-[#7c5569]">
-                            Nisha Hair Salon
+                            Nisha Hair Salon & Beauty Parlour
                         </span>{" "}
                         for hair colouring, bridal makeup, hairstyling, beauty
                         treatments, facials, and men's grooming in Gumkhal.
@@ -175,7 +175,7 @@ export default function Testimonials() {
 
                         <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#6f6269]">
                             Your feedback helps others discover trusted beauty,
-                            hairstyling, and bridal services at Nisha Hair Salon.
+                            hairstyling, and bridal services at Nisha Hair Salon & Beauty Parlour.
                             We'd love to hear about your visit.
                         </p>
 

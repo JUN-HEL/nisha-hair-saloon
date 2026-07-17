@@ -50,7 +50,7 @@ export default function GirlsGallery() {
                         >
 
                             Bridal Makeup & Beauty Gallery –
-                            Nisha Hair Salon,
+                            Nisha Hair Salon & Beauty Parlour,
                             Gumkhal, Pauri Garhwal
 
                         </h2>
@@ -69,7 +69,7 @@ export default function GirlsGallery() {
 
                             Explore our latest bridal makeup,
                             hair smoothing, haircut and beauty
-                            transformations created at Nisha Hair Salon.
+                            transformations created at Nisha Hair Salon & Beauty Parlour.
 
                         </p>
 
@@ -123,7 +123,7 @@ export default function GirlsGallery() {
 
                                     src={item.image}
 
-                                    alt={`${item.title} at Nisha Hair Salon Gumkhal Pauri Garhwal`}
+                                    alt={`${item.title} at Nisha Hair Salon & Beauty Parlour Gumkhal Pauri Garhwal`}
 
                                     loading="lazy"
 
@@ -163,7 +163,7 @@ export default function GirlsGallery() {
 
                             href="/gallery?category=Bridal%20Makeup"
 
-                            aria-label="View bridal makeup gallery of Nisha Hair Salon"
+                            aria-label="View bridal makeup gallery of Nisha Hair Salon & Beauty Parlour"
 
                             className="
                             group

@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
                         </h2>
 
                         <p className="mt-6 leading-8 text-zinc-600">
-                            Nisha Hair Salon in Gumkhal, Pauri Garhwal provides
+                            Nisha Hair Salon & Beauty Parlour in Gumkhal, Pauri Garhwal provides
                             professional hair, makeup, and beauty services with a
                             focus on quality, hygiene, and personalized care.
                             Whether it is a wedding, special event, or regular

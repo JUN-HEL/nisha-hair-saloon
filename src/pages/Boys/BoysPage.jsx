@@ -10,7 +10,7 @@ export default function BoysPage() {
     return (
         <>
             <SEO
-                title="Men's Haircuts & Grooming | Nisha Hair Salon"
+                title="Men's Haircuts & Grooming | Nisha Hair Salon & Beauty Parlour"
                 description="Professional men's haircuts, beard styling, hair spa, hair coloring, grooming and styling services in Gumkhal."
                 canonical="https://nisha-hair-salon.netlify.app/boys"
             />

@@ -6,7 +6,7 @@ import "./hero.css";
 
 export default function Hero() {
     const waText = encodeURIComponent(
-        "Hi! I'd like to book an appointment at Nisha Hair Salon."
+        "Hi! I'd like to book an appointment at Nisha Hair Salon & Beauty Parlour."
     );
 
     const waLink = `https://wa.me/${siteConfig.whatsapp}?text=${waText}`;
@@ -231,7 +231,7 @@ export default function Hero() {
                     >
                         Experience premium bridal makeup, hairstyling,
                         haircuts, hair coloring, facials, skincare and
-                        beauty services at <strong>Nisha Hair Salon</strong>
+                        beauty services at <strong>Nisha Hair Salon & Beauty Parlour </strong>
                         in Gumkhal, Pauri Garhwal. Our expert stylists
                         create elegant looks for weddings, parties and
                         everyday confidence.
@@ -240,7 +240,7 @@ export default function Hero() {
                     {/* Hidden SEO Description */}
 
                     <p className="sr-only">
-                        Nisha Hair Salon is a professional hair salon and
+                        Nisha Hair Salon & Beauty Parlour is a professional hair salon and
                         beauty studio in Gumkhal, Pauri Garhwal,
                         Uttarakhand offering bridal makeup, haircuts,
                         hairstyling, facials, hair coloring, waxing,
@@ -253,7 +253,7 @@ export default function Hero() {
 
                         <Link
                             to="/booking"
-                            aria-label="Book an appointment at Nisha Hair Salon"
+                            aria-label="Book an appointment at Nisha Hair Salon & Beauty Parlour"
                             className="
                                     rounded-2xl
                                     bg-gradient-to-r
@@ -415,7 +415,7 @@ export default function Hero() {
 
                             <img
                                 src="/images/bg.png"
-                                alt="Professional bridal makeup and hairstyling by Nisha Hair Salon in Gumkhal, Pauri Garhwal"
+                                alt="Professional bridal makeup and hairstyling by Nisha Hair Salon & Beauty Parlour in Gumkhal, Pauri Garhwal"
                                 width={650}
                                 height={760}
                                 loading="eager"

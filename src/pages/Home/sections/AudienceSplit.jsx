@@ -42,7 +42,7 @@ export default function AudienceSplit() {
                     </h2>
 
                     <p className="mt-5 text-lg leading-8 text-zinc-600">
-                        Nisha Hair Salon, Gumkhal offers dedicated beauty and
+                        Nisha Hair Salon & Beauty Parlour, Gumkhal offers dedicated beauty and
                         grooming services for both men and women with professional
                         care and experience.
                     </p>

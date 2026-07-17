@@ -23,7 +23,7 @@ const stats = [
 export default function AboutHero() {
     return (
         <section
-            aria-label="About Nisha Hair Salon Gumkhal"
+            aria-label="About Nisha Hair Salon & Beauty Parlour Gumkhal"
             className="bg-[#fdf8f3] py-24"
         >
             <div className="mx-auto max-w-7xl px-6">
@@ -55,7 +55,7 @@ export default function AboutHero() {
 
 
                         <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-600">
-                            Nisha Hair Salon has been a trusted beauty destination
+                            Nisha Hair Salon & Beauty Parlour has been a trusted beauty destination
                             in Gumkhal, Pauri Garhwal for over 25 years.
                             We create beautiful hairstyles, bridal makeovers,
                             and personalized beauty services with experience

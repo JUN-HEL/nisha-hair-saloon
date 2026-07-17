@@ -13,8 +13,8 @@ const AboutPage = () => {
         <>
 
             <SEO
-                title="About Nisha Hair Salon"
-                description="Learn about Nisha Hair Salon, our experienced team and our commitment to quality hair, beauty and bridal services in Gumkhal."
+                title="About Nisha Hair Salon & Beauty Parlour"
+                description="Learn about Nisha Hair Salon & Beauty Parlour, our experienced team and our commitment to quality hair, beauty and bridal services in Gumkhal."
                 canonical="https://nisha-hair-salon.netlify.app/about"
             />
             <AboutHero />

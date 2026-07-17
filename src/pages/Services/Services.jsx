@@ -42,8 +42,8 @@ const Services = () => {
         <>
 
             <SEO
-                title="Salon Services in Gumkhal | Nisha Hair Salon"
-                description="Explore professional haircuts, bridal makeup, hair colouring, hair spa, men's grooming and beauty services at Nisha Hair Salon Gumkhal."
+                title="Salon Services in Gumkhal | Nisha Hair Salon & Beauty Parlour"
+                description="Explore professional haircuts, bridal makeup, hair colouring, hair spa, men's grooming and beauty services at Nisha Hair Salon & Beauty Parlour Gumkhal."
                 canonical="https://nisha-hair-salon.netlify.app/services"
 
                 schema={{
@@ -54,7 +54,7 @@ const Services = () => {
                         "LocalBusiness"
                     ],
 
-                    "name": "Nisha Hair Salon",
+                    "name": "Nisha Hair Salon & Beauty Parlour",
 
                     "url":
                         "https://nisha-hair-salon.netlify.app",
@@ -253,7 +253,7 @@ const Services = () => {
                             Discover premium beauty treatments at{" "}
 
                             <strong className="text-[#7c5569]">
-                                Nisha Hair Salon
+                                Nisha Hair Salon & Beauty Parlour
                             </strong>
 
                             .
@@ -525,7 +525,7 @@ const Services = () => {
                             "
                         >
 
-                            Nisha Hair Salon provides professional salon
+                            Nisha Hair Salon & Beauty Parlour provides professional salon
                             services with modern techniques, premium products
                             and personalised care. Whether you need a bridal
                             makeover, stylish haircut, hair treatment or

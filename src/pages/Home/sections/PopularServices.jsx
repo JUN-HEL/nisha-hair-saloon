@@ -71,7 +71,7 @@ export default function ServicesSection() {
                         >
                             Hair & Beauty Services
                             <br />
-                            <span className="gradient-text"> at Nisha Hair Salon</span>
+                            <span className="gradient-text"> at Nisha Hair Salon & Beauty Parlour</span>
 
                         </h2>
 
@@ -84,7 +84,7 @@ export default function ServicesSection() {
                         >
                             Discover professional haircuts, bridal makeup,
                             hairstyling, facials, hair coloring, skincare,
-                            waxing and beauty treatments at Nisha Hair Salon
+                            waxing and beauty treatments at Nisha Hair Salon & Beauty Parlour
                             in Gumkhal, Pauri Garhwal. Every service is
                             delivered with premium products, expert care and
                             attention to detail.
@@ -93,7 +93,7 @@ export default function ServicesSection() {
                         {/* Hidden SEO Content */}
 
                         <p className="sr-only">
-                            Nisha Hair Salon offers professional haircuts,
+                            Nisha Hair Salon & Beauty Parlour offers professional haircuts,
                             bridal makeup, facials, hair spa, hair coloring,
                             waxing, threading, skincare and beauty services
                             in Gumkhal, Pauri Garhwal, Uttarakhand.
@@ -101,7 +101,7 @@ export default function ServicesSection() {
 
                         <Link
                             to="/services"
-                            aria-label="Explore all hair and beauty services offered by Nisha Hair Salon"
+                            aria-label="Explore all hair and beauty services offered by Nisha Hair Salon & Beauty Parlour"
                             className="
                                 mt-6
                                 inline-flex
@@ -173,7 +173,7 @@ export default function ServicesSection() {
 
                                 <img
                                     src={service.image}
-                                    alt={`${service.name} at Nisha Hair Salon in Gumkhal, Pauri Garhwal`}
+                                    alt={`${service.name} at Nisha Hair Salon & Beauty Parlour in Gumkhal, Pauri Garhwal`}
                                     loading="lazy"
                                     decoding="async"
                                     width={400}

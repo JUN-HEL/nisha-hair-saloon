@@ -13,7 +13,7 @@ const team = [
         role: "Founder | Makeup Specialist & Hair Specialist",
         image: "/images/team/MrDilshadKhan.jpg",
         description:
-            "Founder of Nisha Hair Salon, Gumkhal, Pauri Garhwal. Specializing in bridal makeup, professional makeup looks, hair styling, and beauty transformations with years of experience.",
+            "Founder of Nisha Hair Salon & Beauty Parlour, Gumkhal, Pauri Garhwal. Specializing in bridal makeup, professional makeup looks, hair styling, and beauty transformations with years of experience.",
         instagram:
             "https://www.instagram.com/nishabeauty_parlour__1/",
         facebook: "#",
@@ -25,7 +25,7 @@ const team = [
         role: "Men's Hair Specialist",
         image: "/images/team/tampu1.jpg",
         description:
-            "Expert men's hair specialist at Nisha Hair Salon, Gumkhal. Creating modern haircuts, stylish looks, beard grooming, and professional men's hairstyles.",
+            "Expert men's hair specialist at Nisha Hair Salon & Beauty Parlour, Gumkhal. Creating modern haircuts, stylish looks, beard grooming, and professional men's hairstyles.",
         instagram:
             "https://www.instagram.com/the_styling_nawed/",
         facebook: "#",
@@ -61,14 +61,14 @@ export default function TeamSection() {
                         Meet The
 
                         <span className="block bg-gradient-to-r from-[#7c5569] via-[#b58fa2] to-[#d5b48c] bg-clip-text text-transparent">
-                            Experts Behind Nisha Hair Salon
+                            Experts Behind Nisha Hair Salon & Beauty Parlour
                         </span>
 
                     </h2>
 
 
                     <p className="mx-auto mt-5 max-w-2xl text-zinc-600">
-                        Meet the experienced professionals behind Nisha Hair Salon,
+                        Meet the experienced professionals behind Nisha Hair Salon & Beauty Parlour,
                         Gumkhal, Pauri Garhwal. Our team combines creativity,
                         experience, and personal care to create beautiful styles
                         for every client.
@@ -127,7 +127,7 @@ export default function TeamSection() {
 
                                     <img
                                         src={member.image}
-                                        alt={`${member.name} - ${member.role} at Nisha Hair Salon Gumkhal Pauri Garhwal`}
+                                        alt={`${member.name} - ${member.role} at Nisha Hair Salon & Beauty Parlour Gumkhal Pauri Garhwal`}
                                         className="h-[430px] w-full object-cover transition duration-700 group-hover:scale-110"
                                     />
 

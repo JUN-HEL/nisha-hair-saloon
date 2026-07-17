@@ -81,8 +81,8 @@ Thank you.
 
 
             <SEO
-                title="Contact Nisha Hair Salon | Book Appointment"
-                description="Contact Nisha Hair Salon Gumkhal for bridal makeup, hairstyling, hair treatments and beauty services."
+                title="Contact Nisha Hair Salon & Beauty Parlour | Book Appointment"
+                description="Contact Nisha Hair Salon & Beauty Parlour Gumkhal for bridal makeup, hairstyling, hair treatments and beauty services."
                 canonical="https://nisha-hair-salon.netlify.app/contact"
             />
 
@@ -150,7 +150,7 @@ Thank you.
           ">
 
                         <Sparkles size={15} />
-                        Contact Nisha Hair Salon
+                        Contact Nisha Hair Salon & Beauty Parlour
 
                     </div>
 
@@ -191,7 +191,7 @@ Thank you.
           sm:text-lg
           ">
 
-                        Visit Nisha Hair Salon Gumkhal for luxury
+                        Visit Nisha Hair Salon & Beauty Parlour Gumkhal for luxury
                         bridal makeup, hairstyling, hair treatments
                         and complete beauty services.
 
@@ -481,7 +481,7 @@ Thank you.
 
 
                     <iframe
-                        title="Nisha Hair Salon Location"
+                        title="Nisha Hair Salon & Beauty Parlour Location"
                         src="https://www.google.com/maps?q=Gumkhal+Market+Pauri+Garhwal&output=embed"
                         className="
           h-[480px]

@@ -82,7 +82,7 @@ export default function BridalHighlight() {
                         >
 
                             Bridal Makeup & Party Makeup at
-                            Nisha Hair Salon,
+                            Nisha Hair Salon & Beauty Parlour,
                             Gumkhal, Pauri Garhwal
 
                         </h2>
@@ -101,7 +101,7 @@ export default function BridalHighlight() {
 
                             Celebrate your special moments with professional
                             bridal makeup and hairstyling from
-                            <strong> Nisha Hair Salon</strong>.
+                            <strong> Nisha Hair Salon & Beauty Parlour</strong>.
                             We create elegant bridal looks, HD makeup,
                             engagement styles, reception makeup and
                             customized wedding beauty transformations.
@@ -207,7 +207,7 @@ export default function BridalHighlight() {
                                     <img
                                         src={image}
                                         alt={`Bridal makeup look ${index + 1
-                                            } at Nisha Hair Salon`}
+                                            } at Nisha Hair Salon & Beauty Parlour`}
                                         loading="lazy"
                                         width="700"
                                         height="800"
