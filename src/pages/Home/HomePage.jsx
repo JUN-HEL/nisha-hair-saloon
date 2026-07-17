@@ -6,6 +6,7 @@ import WhyChooseUs from "./sections/WhyChooseUs";
 import GalleryPreview from "./sections/GalleryPreview";
 import LocationPreview from "./sections/LocationPreview";
 import FinalCTA from "./sections/FinalCTA";
+import Testimonials from "./sections/Testimonials";
 import SEO from "../../components/SEO/SEO";
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
             {/* <ReelsPreview /> */}
             <WhyChooseUs />
             <GalleryPreview />
+            <Testimonials />
             <LocationPreview />
         </>
     );

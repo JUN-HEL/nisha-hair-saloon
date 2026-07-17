@@ -4,12 +4,80 @@ import Card from "./Card";
 const Girls = () => {
     const featured = GirlsServices.filter(item => item.featured);
 
-    return (
-        <section className="section-padding relative overflow-hidden">
 
-            {/* Background Glow */}gi
-            <div
-                className="
+    const girlsServiceSchema = {
+        "@context": "https://schema.org",
+        "@type": [
+            "BeautySalon",
+            "LocalBusiness"
+        ],
+
+        "name": "Nisha Hair Salon",
+
+        "url": "https://nisha-hair-salon.netlify.app",
+
+        "image":
+            "https://nisha-hair-salon.netlify.app/images/seo-cover.jpg",
+
+        "description":
+            "Professional women's beauty services including bridal makeup, hair styling, hair colour, hair spa, manicure and pedicure at Nisha Hair Salon Gumkhal.",
+
+
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gumkhal",
+            "addressRegion": "Uttarakhand",
+            "addressCountry": "IN"
+        },
+
+
+        "priceRange": "₹99 - ₹14999",
+
+
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+
+            "name": "Women's Beauty Services",
+
+            "itemListElement": GirlsServices.map((service) => ({
+                "@type": "Offer",
+
+                "price": service.price,
+
+                "priceCurrency": "INR",
+
+                "itemOffered": {
+                    "@type": "Service",
+
+                    "name": service.name,
+
+                    "description": service.description,
+
+                    "areaServed": "Gumkhal"
+                }
+            }))
+        },
+
+
+        "sameAs": [
+            "https://local.google.com/place?placeid=ChIJi2WsKJedCTkR6fLVEOJEPiE&utm_medium=noren&utm_source=gbp&utm_campaign=2026"
+        ]
+    };
+
+
+    return (
+        <>
+            <SEO
+                title="Women's Beauty Services in Gumkhal | Nisha Hair Salon"
+                description="Book bridal makeup, hair styling, hair colouring, hair spa, smoothening, manicure and pedicure services at Nisha Hair Salon Gumkhal."
+                canonical="https://nisha-hair-salon.netlify.app/services/girls"
+                schema={girlsServiceSchema}
+            />
+            <section className="section-padding relative overflow-hidden">
+
+                {/* Background Glow */}
+                <div
+                    className="
                 absolute
                 -top-20
                 left-0
@@ -19,10 +87,10 @@ const Girls = () => {
                 bg-[#d5b48c]/20
                 blur-3xl
                 "
-            />
+                />
 
-            <div
-                className="
+                <div
+                    className="
                 absolute
                 right-0
                 top-40
@@ -32,61 +100,61 @@ const Girls = () => {
                 bg-[#b58fa2]/20
                 blur-3xl
                 "
-            />
+                />
 
 
-            {/* Hero */}
-            <div className="container-custom relative">
+                {/* Hero */}
+                <div className="container-custom relative">
 
-                <div
-                    className="
+                    <div
+                        className="
                     glass-card
                     rounded-[2.5rem]
                     p-8
                     md:p-12
                     "
-                >
+                    >
 
-                    <div className="max-w-xl">
+                        <div className="max-w-xl">
 
-                        <p
-                            className="
+                            <p
+                                className="
                             text-sm
                             uppercase
                             tracking-[0.3em]
                             text-[#7c5569]
                             "
-                        >
-                            Beauty Services
-                        </p>
+                            >
+                                Beauty Services
+                            </p>
 
 
-                        <h1
-                            className="
+                            <h1
+                                className="
                             heading-lg
                             mt-2
                             "
-                        >
+                            >
 
-                            <span className="gradient-text">
-                                Shine your hair
-                            </span>
-                        </h1>
+                                <span className="gradient-text">
+                                    Shine your hair
+                                </span>
+                            </h1>
 
 
-                        <p
-                            className="
+                            <p
+                                className="
                             text-muted
                             mt-5
                             "
-                        >
-                            Premium hair, makeup, skin and bridal services
-                            designed to enhance your natural beauty.
-                        </p>
+                            >
+                                Premium hair, makeup, skin and bridal services
+                                designed to enhance your natural beauty.
+                            </p>
 
 
-                        <button
-                            className="
+                            <button
+                                className="
                             mt-8
                             gradient-bg
                             rounded-full
@@ -97,28 +165,100 @@ const Girls = () => {
                             transition
                             hover:scale-105
                             "
-                        >
-                            Explore Services
-                        </button>
+                            >
+                                Explore Services
+                            </button>
 
-                    </div>
+                        </div>
 
 
 
-                    {/* Featured */}
-                    <div
-                        className="
+                        {/* Featured */}
+                        <div
+                            className="
                         mt-12
                         grid
                         gap-6
                         md:grid-cols-3
                         "
+                        >
+
+                            {featured.slice(0, 3).map(service => (
+                                <Card
+                                    key={service.id}
+                                    data={service}
+                                />
+                            ))}
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                {/* All Services */}
+
+                <div className="container-custom relative mt-20">
+
+
+                    <div className="flex items-end justify-between">
+
+                        <div>
+
+                            <p
+                                className="
+                            text-sm
+                            uppercase
+                            tracking-[0.3em]
+                            text-[#b58fa2]
+                            "
+                            >
+                                Collection
+                            </p>
+
+
+                            <h2
+                                className="
+                            heading-lg
+                            mt-3
+                            "
+                            >
+                                Beauty
+                                <span className="gradient-text">
+                                    Essentials
+                                </span>
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        className="
+                    mt-10
+                    grid
+                    gap-7
+                    sm:grid-cols-2
+                    lg:grid-cols-4
+                    "
                     >
 
-                        {featured.slice(0, 3).map(service => (
+                        {GirlsServices.map(service => (
                             <Card
                                 key={service.id}
-                                data={service}
+                                data={{
+                                    ...service,
+                                    name:
+                                        service.name
+                                            .replace("Hair ", "")
+                                            .replace("Bridal ", "")
+                                            .replace("Premium ", "")
+                                }}
                             />
                         ))}
 
@@ -127,80 +267,9 @@ const Girls = () => {
 
                 </div>
 
-            </div>
 
-
-
-            {/* All Services */}
-
-            <div className="container-custom relative mt-20">
-
-
-                <div className="flex items-end justify-between">
-
-                    <div>
-
-                        <p
-                            className="
-                            text-sm
-                            uppercase
-                            tracking-[0.3em]
-                            text-[#b58fa2]
-                            "
-                        >
-                            Collection
-                        </p>
-
-
-                        <h2
-                            className="
-                            heading-lg
-                            mt-3
-                            "
-                        >
-                            Beauty
-                            <span className="gradient-text">
-                                Essentials
-                            </span>
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-
-                <div
-                    className="
-                    mt-10
-                    grid
-                    gap-7
-                    sm:grid-cols-2
-                    lg:grid-cols-4
-                    "
-                >
-
-                    {GirlsServices.map(service => (
-                        <Card
-                            key={service.id}
-                            data={{
-                                ...service,
-                                name:
-                                    service.name
-                                        .replace("Hair ", "")
-                                        .replace("Bridal ", "")
-                                        .replace("Premium ", "")
-                            }}
-                        />
-                    ))}
-
-                </div>
-
-
-            </div>
-
-
-        </section>
+            </section>
+        </>
     );
 };
 
