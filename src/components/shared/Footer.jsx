@@ -136,7 +136,11 @@ export default function Footer() {
                                 aria-label="WhatsApp"
                                 className="rounded-full bg-white/10 p-3 transition hover:bg-green-500"
                             >
-                                <MessageCircle size={18} />
+                                <img
+                                    src="/whatsapp.svg"
+                                    alt="WhatsApp"
+                                    className="h-5 w-5 transition-transform group-hover:rotate-12"
+                                />
                             </a>
 
                             <a
@@ -159,14 +163,19 @@ export default function Footer() {
                                 <Instagram size={18} />
                             </a>
 
+
                             <a
-                                href="https://www.facebook.com/people/Nisha-Baeyuty-Parlour/"
+                                href="https://www.youtube.com/@the_styling_nawed"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Facebook"
-                                className="rounded-full bg-white/10 p-3 transition hover:bg-blue-600"
-                            >
-                                <Facebook size={18} />
+                                className="rounded-full bg-white/10 p-3 transition hover:bg-red-600">
+                                <img
+                                    src="/youtube.svg"
+                                    alt="Youtube"
+                                    className="h-5 w-5 transition-transform group-hover:rotate-12"
+                                />
+
                             </a>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { siteConfig } from "../../data/siteConfig";
 
 export default function FloatingContact() {
@@ -12,9 +12,10 @@ export default function FloatingContact() {
                     rel="noreferrer"
                     className="group flex items-center gap-3 rounded-full bg-green-500 px-5 py-3 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-green-600"
                 >
-                    <MessageCircle
-                        size={20}
-                        className="transition-transform group-hover:rotate-12"
+                    <img
+                        src="/whatsapp.svg"
+                        alt="WhatsApp"
+                        className="h-5 w-5 transition-transform group-hover:rotate-12"
                     />
                     <span className="font-medium">WhatsApp</span>
                 </a>
@@ -61,7 +62,11 @@ export default function FloatingContact() {
                         rel="noreferrer"
                         className="flex flex-col items-center justify-center gap-1 border-x border-zinc-100 py-3 text-green-600 transition hover:bg-green-50"
                     >
-                        <MessageCircle size={22} />
+                        <img
+                            src="/whatsapp.svg"
+                            alt="WhatsApp"
+                            className="h-[22px] w-[22px]"
+                        />
                         <span className="text-xs font-semibold">WhatsApp</span>
                     </a>
 
