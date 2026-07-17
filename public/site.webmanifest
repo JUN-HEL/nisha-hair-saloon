@@ -1,21 +1,36 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Nisha Hair Salon & Beauty Parlour",
+  "short_name": "Nisha Salon",
+  "description": "Professional hair salon and beauty parlour in Gumkhal, Uttarakhand offering bridal makeup, haircuts, hair spa, keratin treatment, facials, men's grooming and beauty services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "theme_color": "#7c5569",
+  "background_color": "#ffffff",
+  "categories": [
+    "beauty",
+    "lifestyle",
+    "business"
+  ],
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
