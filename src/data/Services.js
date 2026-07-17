@@ -4,8 +4,8 @@ export const GirlsServices = [
         category: "makeup",
         name: "Bridal Makeup Artist Service in Gumkhal",
         image: "/images/services/girls/bridal-makeup-3.webp",
-        price: 1199,
-        duration: "4 Hours",
+        price: 14999,
+        duration: "2-3 Hours",
         popular: true,
         featured: true,
         description:
@@ -14,7 +14,7 @@ export const GirlsServices = [
             "HD Bridal Makeup",
             "Professional Hair Styling",
             "Bridal Draping",
-            "Final Makeup Touch-up",
+            "Final Makeup Touch-up",    
         ],
     },
 

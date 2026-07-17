@@ -1,5 +1,6 @@
 import { GirlsServices } from "../../../data/Services";
 import Card from "./Card";
+import SEO from "../../../components/SEO/SEO";
 
 const Girls = () => {
     const featured = GirlsServices.filter(item => item.featured);

@@ -45,7 +45,7 @@ export default function GalleryHero() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="overflow-hidden rounded-[1.5rem]">
                                 <img
-                                    src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop"
+                                    src="images/tampu.jpg"
                                     alt="Salon work 1"
                                     className="h-48 w-full object-cover"
                                 />
@@ -53,7 +53,7 @@ export default function GalleryHero() {
 
                             <div className="overflow-hidden rounded-[1.5rem]">
                                 <img
-                                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop"
+                                    src="images/bg.png"
                                     alt="Salon work 2"
                                     className="h-48 w-full object-cover"
                                 />
