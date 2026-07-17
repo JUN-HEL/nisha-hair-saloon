@@ -10,11 +10,11 @@ import Services from "../pages/Services/Services";
 import GalleryPage from "../pages/Gallery/GalleryPage";
 import AboutPage from "../pages/About/AboutPage";
 import ContactPage from "../pages/Contact/ContactPage";
+import FAQPage from "../pages/FAQ/FAQ"; // ✅ New
 
 // Service Sections
 import Boys from "../pages/Services/sections/Boys";
 import Girls from "../pages/Services/sections/Girls";
-
 
 const router = createBrowserRouter([
   {
@@ -22,24 +22,20 @@ const router = createBrowserRouter([
     element: <MainLayout />,
 
     children: [
-
       {
         index: true,
         element: <HomePage />,
       },
-
 
       {
         path: "boys",
         element: <BoysPage />,
       },
 
-
       {
         path: "girls",
         element: <GirlsPage />,
       },
-
 
       // Services
       {
@@ -57,13 +53,17 @@ const router = createBrowserRouter([
         element: <Girls />,
       },
 
-
       // Gallery
       {
         path: "gallery",
         element: <GalleryPage />,
       },
 
+      // FAQ
+      {
+        path: "faq",
+        element: <FAQPage />,
+      },
 
       // Other Pages
       {
@@ -75,10 +75,8 @@ const router = createBrowserRouter([
         path: "contact",
         element: <ContactPage />,
       },
-
     ],
   },
 ]);
 
-
-export default router;
+export default router; 
