@@ -13,21 +13,21 @@ const reviews = [
         verified: true,
     },
     {
-        name: "Sneha Rawat",
-        initials: "SR",
-        service: "Bridal Makeup",
+        name: "Suhani",
+        initials: "S",
+        service: "Hair Cut",
         rating: 5,
         review:
-            "Absolutely loved my bridal look. The makeup was elegant, long-lasting, and exactly how I imagined it. Thank you for making my special day even more beautiful.",
+            "Great work and team! Personal favourite 🫶❤️",
         verified: true,
     },
     {
-        name: "Rahul Negi",
-        initials: "RN",
+        name: "Charlie",
+        initials: "C",
         service: "Haircut & Beard Styling",
         rating: 5,
         review:
-            "Professional staff, relaxing atmosphere, and excellent grooming services. Definitely one of the best salons around Gumkhal.",
+            "Had a wonderful experience at Nisha Beauty Parlour! ✨The makeup was absolutely flawless and perfectly suited the occasion.The hairstyling was equally amazing—very neat, stylish, and exactly how I wanted it. The staff was friendly, professional, and made the whole experience comfortable and relaxing.You can really see their attention to detail and passion for beauty. Highly recommended for anyone looking for beautiful makeup and elegant hair styling! 💄💇‍♀️",
         verified: true,
     },
 ];
@@ -158,8 +158,8 @@ export default function Testimonials() {
                                 onClick={() => setCurrentIndex(index)}
                                 aria-label={`View review ${index + 1}`}
                                 className={`h-2 rounded-full transition-all duration-300 ${currentIndex === index
-                                        ? "w-10 bg-gradient-to-r from-[#7c5569] to-[#d5b48c]"
-                                        : "w-2 bg-[#b58fa2]/30 hover:bg-[#7c5569]/40"
+                                    ? "w-10 bg-gradient-to-r from-[#7c5569] to-[#d5b48c]"
+                                    : "w-2 bg-[#b58fa2]/30 hover:bg-[#7c5569]/40"
                                     }`}
                             />
                         ))}
