@@ -196,8 +196,7 @@ export default function Hero() {
                                 lg:text-7xl
                             "
                     >
-                        Luxury Hair &
-
+                        Beautiful Hair. 
                         <br />
 
                         <span
@@ -210,7 +209,7 @@ export default function Hero() {
                                     text-transparent
                                 "
                         >
-                            Bridal Makeup
+                            Stunning Bridal Makeup.
                         </span>
 
                         <br />
